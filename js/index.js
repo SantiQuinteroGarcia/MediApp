@@ -15,11 +15,32 @@
  * KIND, either express or implied.  See the License for the
  * specific language governing permissions and limitations
  * under the License.
- */
+ */var pantalladecarga;
+ var pantallaprincipal;
+
+ window.onload = inicio;
+function inicio(){
+
+    inicializarvariables();
+    main();
+}
+
+function main(){
+    
+    mostrarpantalla(pantalladecarga);
+    setTimeout("cambiopantalla(pantallaprincipal,pantalladecarga)", 1500);
+    }
+
+
 var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+
+        document.getElementById("btnMedicamentos").addEventListener("click", mostrarMedicamentos);
+        document.getElementById("btncitas").addEventListener("click", mostrarcitas);
+
+        //acá escucha los botones--------------------------------------------------------------------
     },
 
     // deviceready Event Handler
@@ -42,5 +63,50 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+
+
+
+
+function inicializarvariables(){
+ pantalladecarga=document.getElementById("pantallacarga");
+ pantallaprincipal=document.getElementById("inicio");
+
+}
+
+
+
+    function mostrarpantalla(pantalla){
+    pantalla.className=pantalla.className.replace( /(?:^|\s)ocultar(?!\S)/g , '' );
+  }
+
+ function cambiopantalla(pantalla, pantallaanterior){
+    pantallaanterior.className +=" ocultar";
+    pantalla.className=pantalla.className.replace( /(?:^|\s)ocultar(?!\S)/g , '' );
+  }
+function ocultar(){
+
+    document.getElementById("pantallacarga").className = "ocultar";
+    document.getElementById("inicio").className = "ocultar";
+    document.getElementById("divMedicamentos").className = "ocultar";
+}
+
+function mostrarInicio(){
+
+    ocultar();
+    document.getElementById("inicio").className = "Pantalla1 animated fadeIn";
+}
+
+function mostrarMedicamentos(){
+
+    ocultar();
+    document.getElementById("divMedicamentos").className = "Pantalla2 animated fadeIn";
+}
+function mostrarcitas(){
+
+    ocultar();
+    document.getElementById("citas").className = "Pantalla2 animated fadeIn";
+}
+//acá pone las funciones-------------------------------------------------------------------------------------
 
 app.initialize();

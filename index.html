@@ -18,8 +18,9 @@
     under the License.
 -->
 <html>
-    <head>
-        <!--
+
+<head>
+    <!--
         Customize this policy to fit your own app's needs. For more guidance, see:
             https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
         Some notes:
@@ -28,22 +29,177 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+
+    <title>MediApp</title>
+</head>
+
+
+<body>
+
+    <section id="pantallacarga" class="pantalladecarga animated fadeIn"></section>
+
+    <section id="inicio" class="Pantalla1 animated fadeIn ocultar">
+
+
+        <div id="cabecera">
+            <input value="Inicio" class="botonesprincipales Ubicacion  animated flipInX " id="input1" type="button" name="">
+            <input value="Medicam." class="botonesprincipales Ubicacion  animated flipInX " id="btnMedicamentos" type="button" name="">
+            <input value="Cit medicam." class="botonesprincipales Ubicacion  animated flipInX " id="btncitas" type="button" name="">
+            <input value="Mas" class="botonesprincipales Ubicacion   animated flipInX " id="input1" type="button" name="">
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+
+        <div class="contenedor">
+
+            <h3>Calendario con pastilla y su color</h3>
+            <br>
+            <br>
+            <input class="number  Ubicacion  animated flipInX  " type="button" id="btn_1" name="1" value="4">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_2" name="2" value="5">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_3" name="3" value="8">
+            <input class="number  Ubicacion  animated flipInX  " type="button" id="btn_1" name="1" value="4">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_2" name="2" value="5">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_2" name="2" value="5">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_3" name="3" value="8">
+            <input class="number  Ubicacion  animated flipInX  " type="button" id="btn_1" name="1" value="4">
+            <br>
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_4" name="4" value="3">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_5" name="5" value="1">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_6" name="6" value="2">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_2" name="2" value="5">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_3" name="3" value="8">
+            <input class="number  Ubicacion  animated flipInX  " type="button" id="btn_1" name="1" value="4">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_2" name="2" value="5">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_7" name="7" value="9">
+            <br>
+
+        </div>
+
+
+        </div>
+
+        <div class="contenedor2">
+
+            <h3>Medicamento por tomar</h3>
+            <br>
+            <br>
+            <input class="number1 Ubicacion  animated flipInX " type="button" id="btn_7" name="" value="">
+            <input value="Dolex" class="botonesprincipales1 Ubicacion  animated flipInX " id="input1" type="button" name="">
+
+            <div class="contenedor3">
+                <input value="8 am" class="botonesprincipales2 Ubicacion  animated flipInX " id="input1" type="button" name="">
+                <br>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+ <section id="citas" class="Pantalla2 animated fadeIn ocultar">
+
+
+        <div id="cabecera">
+            <input value="Inicio" class="botonesprincipales Ubicacion  animated flipInX " id="input1" type="button" name="">
+            <input value="Medicam." class="botonesprincipales Ubicacion  animated flipInX " id="btnMedicamentos" type="button" name="">
+            <input value="Cit medicam." class="botonesprincipales Ubicacion  animated flipInX " id="input1" type="button" name="">
+            <input value="Mas" class="botonesprincipales Ubicacion   animated flipInX " id="input1" type="button" name="">
+        </div>
+
+        <div class="contenedor">
+
+            <h3>Calendario con pastilla y su color</h3>
+            <br>
+            <br>
+            <input class="number  Ubicacion  animated flipInX  " type="button" id="btn_1" name="1" value="4">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_2" name="2" value="5">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_3" name="3" value="8">
+            <input class="number  Ubicacion  animated flipInX  " type="button" id="btn_1" name="1" value="4">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_2" name="2" value="5">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_2" name="2" value="5">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_3" name="3" value="8">
+            <input class="number  Ubicacion  animated flipInX  " type="button" id="btn_1" name="1" value="4">
+            <br>
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_4" name="4" value="3">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_5" name="5" value="1">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_6" name="6" value="2">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_2" name="2" value="5">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_3" name="3" value="8">
+            <input class="number  Ubicacion  animated flipInX  " type="button" id="btn_1" name="1" value="4">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_2" name="2" value="5">
+            <input class="number Ubicacion  animated flipInX " type="button" id="btn_7" name="7" value="9">
+            <br>
+
+        </div>
+
+
+        </div>
+
+        <div class="contenedor2">
+
+            <h3>Medicamento por tomar</h3>
+            <br>
+            <br>
+            <input class="number1 Ubicacion  animated flipInX " type="button" id="btn_7" name="" value="">
+            <input value="Dolex" class="botonesprincipales1 Ubicacion  animated flipInX " id="input1" type="button" name="">
+
+            <div class="contenedor3">
+                <input value="8 am" class="botonesprincipales2 Ubicacion  animated flipInX " id="input1" type="button" name="">
+                <br>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <div  id="divMedicamentos" class="ocultar Pantalla2  ">
+
+        <div class="tituloMedicamentos">
+            <img src="img/tituloMedicamentos.PNG" class="imgTituloMedicamentos">
+        </div>
+        <br>
+        <br>
+        <div class="tituloMedicamentos">
+            <img src="img/listaMedicamentos.PNG" class="imgTituloMedicamentos">
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="anadirMedicamentos">
+            <img src="img/anadirMedicina.PNG" class="anadirMedicamentos">
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="menuMedicamentos">
+            <img src="img/menuMedicamentos.PNG" class="menuMedicamentos">
+        </div>
+
+    </div>
+
+
+
+
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
 </html>
