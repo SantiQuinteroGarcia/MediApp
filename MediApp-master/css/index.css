@@ -1,0 +1,181 @@
+.ocultar{
+    display: none;
+}
+
+
+
+.pantalladecarga{
+    background:url('../img/fondocargainicial.png') no-repeat center center;
+    width: 360px;
+    height: 616px;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    margin: 0;
+    outline:none;
+}
+
+.Pantalla1{
+    background:url('../img/fondo.png') no-repeat center center;
+    width: 360px;
+    height: 616px;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    margin: 0;
+    outline:none;
+}
+.Pantalla2{
+    background:url('../img/fondo.png') no-repeat center center;
+    width: 360px;
+    height: 616px;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    margin: 0;
+    outline:none;
+}
+#divMedicamentos{
+    background:url('../img/fondo.png') no-repeat center center;
+    width: 360px;
+    height: 616px;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    margin: 0;
+    outline:none;
+}
+
+
+.botonesprincipales{
+    top: 0px;
+    left: 0px;
+    width: 23%;
+    height: 27px;
+    background-color: white;
+    align-content: center;
+    font-family:serif;
+    font-size: 100%;
+    outline:none;
+
+}
+
+.botonesprincipales1{
+    top: -37px;
+    left: 60px;
+    width: 23%;
+    height: 27px;
+    background-color: white;
+    align-content: center;
+    font-family: serif;
+    font-size: 100%;
+    outline: none;
+    position: relative;
+}
+
+.botonesprincipales2{
+    top: 6px;
+    left: 14px;
+    width: 60%;
+    height: 27px;
+    background-color: white;
+    align-content: center;
+    font-family: serif;
+    font-size: 100%;
+    outline: none;
+    position: relative;
+}
+
+.contenedor {    
+    border: 1px solid black;
+    width: 345px;
+    height: 164px;
+    position: absolute;
+    top: 169px;
+    left: 5px;
+}
+.contenedorinterno {
+    border-radius: 21px;
+    border: 2px solid black;
+    width: 310px;
+    height: 18px;
+    position: relative;
+    top: -9px;
+    left: 19px;
+    background: white;
+}
+
+.contenedor2{
+        
+    border: 1px solid black;
+    width: 345px;
+    height: 108px;
+    position: absolute;
+    top: 398px;
+    left: 5px;
+}
+.contenedor5 {    
+    width: 444px;
+    height: 35px;
+    position: absolute;
+    top: 407px;
+    left: 61px;
+}
+
+.number{
+    border-radius: 88px;
+    width: 36px;
+    height: 41px;
+    position: relative;
+    top: -39px;
+    left: 10px;
+}
+
+.number1{
+    border-radius: 88px;
+    width: 36px;
+    height: 11px;
+    position: relative;
+    top: -32px;
+    left: 15px;
+}
+
+#calendario{
+    width: 298px;
+    height: 70px;
+    border-radius:20px;
+}
+
+.contenedor3{   
+    border: 1px solid black;
+    width: 77px;
+    height: 40px;
+    position: absolute;
+    top: 66px;
+    left: 266px;
+}
+
+.tituloMedicamentos{
+    top: 0px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.imgTituloMedicamentos{
+    border-radius: 15px;
+    width: 300px;
+}
+
+.anadirMedicamentos{
+    border-radius: 15px;
+    width: 134px;
+    height: 71px;
+    margin: 0 auto;
+}
+
+.menuMedicamentos{
+    border-radius: 15px;
+    width: 330px;
+    height: 75px;
+    margin: 0 auto;
+}

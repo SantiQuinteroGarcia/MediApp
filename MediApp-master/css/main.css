@@ -1,0 +1,124 @@
+
+.pantalladecarga{
+    background:url('../img/fondocargainicial.png') no-repeat center center;
+    width: 411px;
+    height: 731px;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    margin: 0;
+    outline:none;
+}
+
+.Pantalla1{
+    background:url('../img/fondo.png') no-repeat center center;
+    width: 411px;
+    height: 731px;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    margin: 0;
+    outline:none;
+   
+     
+}
+
+
+.botonesprincipales{
+    top: 0px;
+    left: 0px;
+    width: 23%;
+    height: 27px;
+    background-color: white;
+    align-content: center;
+    font-family:serif;
+    font-size: 100%;
+    outline:none;
+
+}
+
+.botonesprincipales1{
+        top: -37px;
+    left: 60px;
+    width: 23%;
+    height: 27px;
+    background-color: white;
+    align-content: center;
+    font-family: serif;
+    font-size: 100%;
+    outline: none;
+    position: relative;
+
+}
+.botonesprincipales2{
+            top: 6px;
+    left: 14px;
+    width: 60%;
+    height: 27px;
+    background-color: white;
+    align-content: center;
+    font-family: serif;
+    font-size: 100%;
+    outline: none;
+    position: relative;
+
+}
+.contenedor {
+        
+    border: 1px solid black;
+    width: 375px;
+    height: 164px;
+    position: absolute;
+    top: 169px;
+    left: 16px;
+
+}
+
+.contenedor2{
+        
+     border: 1px solid black;
+    width: 372px;
+    height: 108px;
+    position: absolute;
+    top: 398px;
+    left: 16px;
+
+}
+
+.number{
+border-radius: 88px;
+    width: 36px;
+    height: 41px;
+    position: relative;
+    top: -39px;
+    left: 10px;
+
+
+}
+
+.number1{
+border-radius: 88px;
+    width: 36px;
+    height: 11px;
+    position: relative;
+    top: -32px;
+    left: 15px;
+
+
+}
+#calendario{
+    width: 298px;
+     height: 70px;
+     border-radius:20px;
+}
+
+.contenedor3{
+        
+    border: 1px solid black;
+    width: 92px;
+    height: 40px;
+    position: absolute;
+    top: 66px;
+    left: 278px;
+
+}
