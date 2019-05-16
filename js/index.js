@@ -39,6 +39,7 @@ var app = {
 
         document.getElementById("btnMedicamentos").addEventListener("click", mostrarMedicamentos);
         document.getElementById("btncitas").addEventListener("click", mostrarcitas);
+        document.getElementById("btninicio").addEventListener("click", mostrarInicio);
 
         //acá escucha los botones--------------------------------------------------------------------
     },
@@ -89,6 +90,8 @@ function ocultar(){
     document.getElementById("pantallacarga").className = "ocultar";
     document.getElementById("inicio").className = "ocultar";
     document.getElementById("divMedicamentos").className = "ocultar";
+     document.getElementById("citas").className = "ocultar";
+
 }
 
 function mostrarInicio(){
