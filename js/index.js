@@ -28,7 +28,7 @@ function inicio(){
 function main(){
     
     mostrarpantalla(pantalladecarga);
-    setTimeout("cambiopantalla(pantallaprincipal,pantalladecarga)", 1500);
+    setTimeout("cambiopantalla(pantallaprincipal,pantalladecarga)", 1000);
     }
 
 
@@ -40,6 +40,8 @@ var app = {
         document.getElementById("btnMedicamentos").addEventListener("click", mostrarMedicamentos);
         document.getElementById("btncitas").addEventListener("click", mostrarcitas);
         document.getElementById("btninicio").addEventListener("click", mostrarInicio);
+        document.getElementById("btnMedicamentosAInicio").addEventListener("click", mostrarInicio);
+        document.getElementById("btnMedicamentoAMedicamentos").addEventListener("click", mostrarMedicamentos);
 
         //acá escucha los botones--------------------------------------------------------------------
     },
@@ -70,28 +72,28 @@ var app = {
 
 
 function inicializarvariables(){
- pantalladecarga=document.getElementById("pantallacarga");
- pantallaprincipal=document.getElementById("inicio");
-
+ 
+    pantalladecarga=document.getElementById("pantallacarga");
+    pantallaprincipal=document.getElementById("inicio");
 }
 
+function mostrarpantalla(pantalla){
 
-
-    function mostrarpantalla(pantalla){
-    pantalla.className=pantalla.className.replace( /(?:^|\s)ocultar(?!\S)/g , '' );
-  }
+    pantalla.className = pantalla.className.replace( /(?:^|\s)ocultar(?!\S)/g , '' );
+}
 
  function cambiopantalla(pantalla, pantallaanterior){
-    pantallaanterior.className +=" ocultar";
-    pantalla.className=pantalla.className.replace( /(?:^|\s)ocultar(?!\S)/g , '' );
-  }
+    
+    pantallaanterior.className += " ocultar";
+    pantalla.className = pantalla.className.replace( /(?:^|\s)ocultar(?!\S)/g , '' );
+}
+
 function ocultar(){
 
     document.getElementById("pantallacarga").className = "ocultar";
     document.getElementById("inicio").className = "ocultar";
     document.getElementById("divMedicamentos").className = "ocultar";
-     document.getElementById("citas").className = "ocultar";
-
+    document.getElementById("citas").className = "ocultar";
 }
 
 function mostrarInicio(){
@@ -105,6 +107,7 @@ function mostrarMedicamentos(){
     ocultar();
     document.getElementById("divMedicamentos").className = "Pantalla2 animated fadeIn";
 }
+
 function mostrarcitas(){
 
     ocultar();

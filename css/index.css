@@ -50,13 +50,13 @@
 .botonesprincipales{
     top: 0px;
     left: 0px;
-    width: 23%;
+    width: 20%;
     height: 65px;
     align-content: center;
     font-family: serif;
     font-size: 100%;
     outline: none;
-
+    margin-top: 5px;
 }
 
 .botonesprincipales1{
@@ -93,6 +93,7 @@
     left: 10px;
     border-radius: 29px;
     background-color: blue;
+    text-align: center;
 }
 
 .contenedor {    
@@ -170,6 +171,25 @@
     top: 0px;
     width: 300px;
     margin: 0 auto;
+    border-radius: 15px;
+    background-color: blue;
+}
+
+.colorTipoLetra{
+    color: white;
+    font-family: serif;
+    text-align: center;
+}
+
+.lista.colorTipoLetra{
+    text-decoration: underline white;
+    margin-bottom: 5px;
+}
+
+label{
+    color: white;
+    font-family: serif;
+    margin-right: 30px;
 }
 
 .imgTituloMedicamentos{
@@ -182,11 +202,33 @@
     width: 134px;
     height: 71px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .menuMedicamentos{
+    position: absolute;
+    top: 520px;
+    left: 15px;
     border-radius: 15px;
     width: 330px;
     height: 75px;
+    text-align: center;
+    background-color: blue;
+}
+
+.listaMedicamentos{
+    text-align: center;
+    width: 315px;
     margin: 0 auto;
+    border-radius: 15px;
+    background-color: blue;
+}
+
+.centrarVerticalmente{
+    vertical-align: middle;
+}
+
+.margenAbajo{
+
+    margin-bottom: 10px;
 }
