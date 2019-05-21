@@ -41,7 +41,10 @@ var app = {
         document.getElementById("btncitas").addEventListener("click", mostrarcitas);
         document.getElementById("btninicio").addEventListener("click", mostrarInicio);
         document.getElementById("btnMedicamentosAInicio").addEventListener("click", mostrarInicio);
-        document.getElementById("btnMedicamentoAMedicamentos").addEventListener("click", mostrarMedicamentos);
+        //document.getElementById("btnMedicamentosAMedicamentos").addEventListener("click", mostrarMedicamentos);
+        document.getElementById("btnMedicamentosACitas").addEventListener("click", mostrarcitas);
+        document.getElementById("btnCitasAMedicamentos").addEventListener("click", mostrarMedicamentos);
+        document.getElementById("btnAnadirMedicina").addEventListener("click", mostrarAnadirMedicina);
 
         //acá escucha los botones--------------------------------------------------------------------
     },
@@ -92,8 +95,9 @@ function ocultar(){
 
     document.getElementById("pantallacarga").className = "ocultar";
     document.getElementById("inicio").className = "ocultar";
-    document.getElementById("divMedicamentos").className = "ocultar";
+    document.getElementById("pantallaMedicamentos").className = "ocultar";
     document.getElementById("citas").className = "ocultar";
+    document.getElementById("pantallaAnadirMedicina").className = "ocultar";
 }
 
 function mostrarInicio(){
@@ -105,7 +109,7 @@ function mostrarInicio(){
 function mostrarMedicamentos(){
 
     ocultar();
-    document.getElementById("divMedicamentos").className = "Pantalla2 animated fadeIn";
+    document.getElementById("pantallaMedicamentos").className = "Pantalla2 animated fadeIn";
 }
 
 function mostrarcitas(){
@@ -113,6 +117,17 @@ function mostrarcitas(){
     ocultar();
     document.getElementById("citas").className = "Pantalla2 animated fadeIn";
 }
+
+function mostrarAnadirMedicina(){
+
+    ocultar();
+    document.getElementById("pantallaAnadirMedicina").className = "Pantalla2 animated fadeIn";
+}
+
+
+
+
+
 //acá pone las funciones-------------------------------------------------------------------------------------
 
 app.initialize();

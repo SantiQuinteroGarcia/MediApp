@@ -44,8 +44,8 @@
 
     <section id="pantallacarga" class="pantalladecarga animated fadeIn"></section>
 
-    <section id="inicio" class="Pantalla1 animated fadeIn ocultar">
 
+    <section id="inicio" class="Pantalla1 animated fadeIn ocultar">
 
         <div id="cabecera" class="cabecera" >
             <input value="Inicio" class="botonesprincipales   animated flipInX " id="input1" type="image" src="img/inicio.png" name="">
@@ -80,9 +80,6 @@
 
         </div>
 
-
-        </div>
-
         <div class="contenedor2">
 
             <h3 id="pastilla" >Medicamento por tomar</h3>
@@ -101,13 +98,11 @@
     </section>
 
 
+    <section id="citas" class="Pantalla2 animated fadeIn ocultar">
 
- <section id="citas" class="Pantalla2 animated fadeIn ocultar">
-
-
-        <div id="cabecera">
+        <div id="cabecera" class="cabecera">
             <input value="Inicio" class="botonesprincipales   animated flipInX " id="btninicio" type="image" src="img/inicioinicio.png" name="">
-            <input value="Medicam." class="botonesprincipales   animated flipInX " id="btnMedicamentos" type="image" src="img/medicamentosinicio.png" name="">
+            <input value="Medicam." class="botonesprincipales   animated flipInX " id="btnCitasAMedicamentos" type="image" src="img/medicamentosinicio.png" name="">
             <input value="Cit medicam." class="botonesprincipales   animated flipInX " id="btncitas" type="image"  src="img/citas medicas hoverinicio.png" name="">
             <input value="Mas" class="botonesprincipales    animated flipInX " id="input1" type="image" src="img/masinicio.png" name="">
         </div>
@@ -115,10 +110,6 @@
         <div class="contenedor">
 
             <h3>Citas medicas agregadas</h3>
-             <div class="contenedorinterno">
-               
-            </div>
-            <br>
             <div class="contenedorinterno">
                
             </div>
@@ -126,44 +117,33 @@
             <div class="contenedorinterno">
                
             </div>
-        </div>
-
-        
+            <br>
+            <div class="contenedorinterno">
+               
+            </div>
         </div>
 
         <div class="contenedor5">
+        
+            <br>
+            <br>
 
-            
-            <br>
-            <br>
-            
             <input value="Agregar Cita" class="botonesprincipales1   animated flipInX " id="input1" type="image" name="" src="img/citainicio.png" >
-
-            
-
         </div>
 
     </section>
 
 
-
-
-
-
-
-
-
-
-
-    <section id="divMedicamentos" class="ocultar Pantalla2">
+    <section id="pantallaMedicamentos" class="ocultar">
 
         <div class="tituloMedicamentos">
-            <h1 class="colorTipoLetra">Medicamentos</h1>
+            <br>
+            <br>
+            <h1 class="colorTipoLetra alinearCentro">Medicamentos</h1>
         </div>
-        <br>
-        <br>
+
         <div class="listaMedicamentos">
-            <h3 class="lista colorTipoLetra">Lista de medicamentos activos</h3>
+            <h3 class="lista colorTipoLetra alinearCentro margenAbajo">Lista de medicamentos activos</h3>
             
             <div class="margenAbajo">
                 <img src="img/color4inicio.png" class="centrarVerticalmente">
@@ -172,35 +152,52 @@
             </div>
 
             <div class="margenAbajo">
-                <img src="img/color4inicio.png" class="centrarVerticalmente">
+                <img src="img/color2inicio.png" class="centrarVerticalmente">
+                <label class="centrarVerticalmente">Dolex Gripa</label>
+                <img src="img/horasinicio.png" value="Horas: 08:00 am" class="centrarVerticalmente">
+            </div>
+            <div class="margenAbajo">
+                <img src="img/color5inicio.png" class="centrarVerticalmente">
                 <label class="centrarVerticalmente">Dolex Gripa</label>
                 <img src="img/horasinicio.png" value="Horas: 08:00 am" class="centrarVerticalmente">
             </div>
 
         </div>
-        <br> 
-        <br>
-        <br>
+        
         <div class="anadirMedicamentos">
-                <input id="btnAnadirMedicina" type="image" src="img/anadirMedicinainicio.png">
+            <input id="btnAnadirMedicina" type="image" src="img/anadirMedicinainicio.png">
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="menuMedicamentos">
-    
+        
+        <div class="menu">
             <input value="Inicio" class="botonesprincipales   animated flipInX " id="btnMedicamentosAInicio" type="image" src="img/inicioinicio.png">
-            <input value="Medicam." class="botonesprincipales   animated flipInX " id="btnMedicamentoAMedicamentos" type="image" src="img/medicamentosinicio.png">
-            <input value="Cit medicam." class="botonesprincipales   animated flipInX " id="btnMedicamentosCItas" type="image"  src="img/citas medicas hoverinicio.png">
-            <input value="Mas" class="botonesprincipales    animated flipInX " id="btnMedicamentosMas" type="image" src="img/masinicio.png">
-    
+            <input value="Medicam." class="botonesprincipales   animated flipInX " id="btnMedicamentosAMedicamentos" type="image" src="img/medicamentosinicio.png">
+            <input value="Cit medicam." class="botonesprincipales   animated flipInX " id="btnMedicamentosACitas" type="image"  src="img/citas medicas hoverinicio.png">
+            <input value="Mas" class="botonesprincipales    animated flipInX " id="btnMedicamentosAMas" type="image" src="img/masinicio.png">
         </div>
 
     </section>
 
 
+    <section id="pantallaAnadirMedicina" class="ocultar">
 
+        <div class="tituloMedicamentos">
+            <br>
+            <br>
+            <h1 class="colorTipoLetra alinearCentro">Añadir Medicina</h1>
+        </div>
+
+        <div class="divConfig">
+            <h4 class="colorTipoLetra alinearIzquierda marginSiete">Nombre del medicamento</h4>
+            <input type="text" class="inputText marginSiete margenAbajo">
+        </div>
+
+        <div class="divConfig">
+            <h4 class="colorTipoLetra alinearIzquierda marginSiete">Horario de recordatorio</h4>
+            <label>Valor del dropdown</label>
+            
+        </div>
+
+    </section>
 
     <script type="text/javascript" src="js/index.js"></script>
 </body>

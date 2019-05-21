@@ -2,8 +2,6 @@
     display: none;
 }
 
-
-
 .pantalladecarga{
     background:url('../img/fondocargainicial.png') no-repeat center center;
     width: 360px;
@@ -30,22 +28,11 @@
     width: 360px;
     height: 616px;
     position: absolute;
-    top:0px;
+    top: 0px;
     left: 0px;
     margin: 0;
     outline:none;
 }
-#divMedicamentos{
-    background:url('../img/fondo.png') no-repeat center center;
-    width: 360px;
-    height: 616px;
-    position: absolute;
-    top:0px;
-    left: 0px;
-    margin: 0;
-    outline:none;
-}
-
 
 .botonesprincipales{
     top: 0px;
@@ -150,8 +137,6 @@
     left: 15px;
 }
 
-
-
 #calendario{
     width: 298px;
     height: 70px;
@@ -169,19 +154,25 @@
 
 .tituloMedicamentos{
     top: 0px;
+    height: 70px;
     width: 300px;
-    margin: 0 auto;
-    border-radius: 15px;
+    margin: 0px auto;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     background-color: blue;
+}
+
+h1{
+    margin: 0 auto;
 }
 
 .colorTipoLetra{
     color: white;
     font-family: serif;
-    text-align: center;
 }
 
-.lista.colorTipoLetra{
+.lista{
     text-decoration: underline white;
     margin-bottom: 5px;
 }
@@ -202,10 +193,11 @@ label{
     width: 134px;
     height: 71px;
     margin: 0 auto;
+    margin-top: 40px;
     text-align: center;
 }
 
-.menuMedicamentos{
+.menu{
     position: absolute;
     top: 520px;
     left: 15px;
@@ -228,7 +220,36 @@ label{
     vertical-align: middle;
 }
 
-.margenAbajo{
+.marginSiete{
+    margin: 0px 7px;
+}
 
+.margenAbajo{
     margin-bottom: 10px;
+}
+
+.divConfig{
+    width: 315px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    background-color: blue;
+}
+
+.alinearIzquierda{
+    text-align: left;
+}
+
+.alinearCentro{
+    text-align: center;
+}
+
+.inputText{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    display: inline-block;
+    background-color: blue;
+    width: 300px;
+    color: white;
 }
