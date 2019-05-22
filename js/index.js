@@ -18,8 +18,9 @@
  */
 var pantalladecarga;
 var pantallaprincipal;
-var usu= new Object();
-let usuarios;
+var cit= new Object();
+ let citasmed;
+
 
 window.onload = inicio;
 function inicio(){
@@ -158,15 +159,15 @@ function guardarCitas()
     
     if (citas.length>0)
     {                       
-            var Usuario= new Object();
+            var CitasMedicas= new Object();
             
-            Usuario.citas=citas;
+            CitasMedicas.citas=citas;
             
-            let usuarios = localStorage.getItem("Usuarios") != null ? JSON.parse(localStorage.getItem("Usuarios")) : [];
-            usu = usuarios.filter(function (usuario) { return usuario.citas == citas; });
+            let citasmed = localStorage.getItem("CitasMedicas") != null ? JSON.parse(localStorage.getItem("CitasMedicas")) : [];
+            cit = citasmed.filter(function (citasmed) { return citasmed.citas == citas; });
             
 
-            if (usu.length>0)
+            if (cit.length>0)
             {
                 alert("Ya se encuentra registrado este correo,intentelo con otro");
 
@@ -174,14 +175,18 @@ function guardarCitas()
             else
             {
                 //toda cambiarlo para que vaya a otra pantalla
-                usuarios.push(Usuario);
-                localStorage.setItem("Usuarios", JSON.stringify(usuarios));
+                citasmed.push(CitasMedicas);
+                localStorage.setItem("CitasMedicas", JSON.stringify(citasmed));
+                  
+                
             }
+            
     }
     else
     {
         alert("rellene los campos");
     }
+    
+    
 }
-
 app.initialize();
