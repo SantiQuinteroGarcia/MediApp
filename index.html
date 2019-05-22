@@ -192,7 +192,7 @@
             <input type="text" class="inputText margenSieteIzq margenAbajo">
         </div>
 
-        <div class="divConfig">
+        <div class="divConfig" id="divConfigurarHorario">
             <h4 class="lista colorTipoLetra alinearIzquierda margenSieteIzq paddingArribaAbajo">Horario de recordatorio</h4>
             
             <div class="margenAbajo">
@@ -231,6 +231,27 @@
         </div>
 
     </section>
+
+    <div id="divConfigurarDia" class="ocultar">
+        
+        <div class="alinearDerecha margenDerecha paddingArribaAbajo">
+            <img src="img/cerrarinicio.png" id="btnCerrarConfigurarDia">
+        </div>
+        <br>
+        <br>
+        <label class="margenSieteIzq color2TipoLetra">Una vez al día</label>
+        <input type="radio" id="radioUnaVez" value="unaVez" name="elegirDia" class="alinearDerecha margenDerecha">
+        <br>
+        <label class="margenSieteIzq color2TipoLetra">De lunes a viernes</label>
+        <input type="radio" id="radioLunesAViernes" value="lunesAViernes" name="elegirDia" class="alinearDerecha margenDerecha">
+        <br>
+        <label class="margenSieteIzq color2TipoLetra">Sábados y domingos</label>
+        <input type="radio" id="radioSabadADomin" value="sabadADomin" name="elegirDia" class="alinearDerecha margenDerecha">
+        <br>
+        <label class="margenSieteIzq color2TipoLetra">Todos los días</label>
+        <input type="radio" id="radioTodosLosDias" value="todosLosDias" name="elegirDia" class="alinearDerecha margenDerecha">
+       
+    </div>
 
     <script type="text/javascript" src="js/index.js"></script>
 </body>

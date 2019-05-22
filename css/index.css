@@ -172,6 +172,11 @@ h1{
     font-family: serif;
 }
 
+.color2TipoLetra{
+    color: green;
+    font-family: serif;
+}
+
 .lista{
     text-decoration: underline white;
     margin-bottom: 5px;
@@ -232,6 +237,10 @@ label{
     margin-bottom: 12px;
 }
 
+.margenArriba{
+    margin-top: 6px;
+}
+
 .margenDerecha{
     margin-right: 10px;
 }
@@ -270,4 +279,18 @@ label{
     background-color: blue;
     width: 300px;
     color: white;
+}
+
+#divConfigurarDia{
+    width: 200px;
+    background-color: gray;
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    border-radius: 15px;
+}
+
+.zindex{
+
+    z-index: 2;
 }

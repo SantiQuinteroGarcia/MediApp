@@ -46,6 +46,7 @@ var app = {
         document.getElementById("btnCitasAMedicamentos").addEventListener("click", mostrarMedicamentos);
         document.getElementById("btnAnadirMedicina").addEventListener("click", mostrarAnadirMedicina);
         document.getElementById("btnDesplegarInicio").addEventListener("click", configurarDias);
+        document.getElementById("btnCerrarConfigurarDia").addEventListener("click", seguirConfigurandoMedicina);
 
         //acá escucha los botones--------------------------------------------------------------------
     },
@@ -128,6 +129,13 @@ function mostrarAnadirMedicina(){
 function configurarDias(){
 
     document.getElementById("btnDesplegarInicio").src = "img/desplegar hoverinicio.png";
+    document.getElementById("divConfigurarDia").className = "zindex";
+}
+
+function seguirConfigurandoMedicina(){
+
+    document.getElementById("btnDesplegarInicio").src = "img/desplegarinicio.png";
+    document.getElementById("divConfigurarDia").className = "ocultar";
 }
 
 
