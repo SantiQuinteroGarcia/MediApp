@@ -84,11 +84,11 @@
 }
 
 .contenedor {    
-    border: 1px solid black;
+        border: 1px solid black;
     width: 345px;
-    height: 164px;
+    height: 168px;
     position: absolute;
-    top: 169px;
+    top: 40px;
     left: 5px;
 }
 .contenedorinterno {
@@ -104,11 +104,11 @@
 
 .contenedor2{
         
-    border: 1px solid black;
+        border: 1px solid black;
     width: 345px;
     height: 108px;
     position: absolute;
-    top: 398px;
+    top: 294px;
     left: 5px;
 }
 .contenedor5 {    
@@ -225,15 +225,12 @@ label{
     vertical-align: middle;
 }
 
-.margen45Izq{
-    margin-left: 45px;
-}
-
-.margenSieteIzq{
-    margin: 0px 10px;
+.marginSiete{
+    margin: 0px 7px;
 }
 
 .margenAbajo{
+<<<<<<< HEAD
     margin-bottom: 12px;
 }
 
@@ -253,6 +250,9 @@ label{
 .margenLados40{
 
     margin: 0px 40px;
+=======
+    margin-bottom: 10px;
+>>>>>>> 250086d78fd987bac05fae458fc56422454d3c61
 }
 
 .divConfig{
@@ -263,8 +263,8 @@ label{
     background-color: blue;
 }
 
-.alinearDerecha{
-    float: right;
+.alinearIzquierda{
+    text-align: left;
 }
 
 .alinearCentro{
@@ -279,6 +279,7 @@ label{
     background-color: blue;
     width: 300px;
     color: white;
+<<<<<<< HEAD
 }
 
 #divConfigurarDia{
@@ -293,4 +294,6 @@ label{
 .zindex{
 
     z-index: 2;
+=======
+>>>>>>> 250086d78fd987bac05fae458fc56422454d3c61
 }

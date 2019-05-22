@@ -35,7 +35,6 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <!--<link rel="stylesheet" type="text/css" href="css/bootstrap.css">-->
 
     <title>MediApp</title>
 </head>
@@ -48,7 +47,7 @@
 
     <section id="inicio" class="Pantalla1 animated fadeIn ocultar">
 
-        <div id="cabecera" class="cabecera" >
+        <div id="cabecera" class="menu" >
             <input value="Inicio" class="botonesprincipales   animated flipInX " id="input1" type="image" src="img/inicio.png" name="">
             <input value="Medicam." class="botonesprincipales   animated flipInX " id="btnMedicamentos" type="image" src="img/medicamentosinicio.png" name="">
             <input value="Cit medicam." class="botonesprincipales   animated flipInX " id="btncitas" type="image"  src="img/citas medicasinicio.png" name="">
@@ -101,7 +100,7 @@
 
     <section id="citas" class="Pantalla2 animated fadeIn ocultar">
 
-        <div id="cabecera" class="cabecera">
+        <div id="cabecera" class="menu">
             <input value="Inicio" class="botonesprincipales   animated flipInX " id="btninicio" type="image" src="img/inicioinicio.png" name="">
             <input value="Medicam." class="botonesprincipales   animated flipInX " id="btnCitasAMedicamentos" type="image" src="img/medicamentosinicio.png" name="">
             <input value="Cit medicam." class="botonesprincipales   animated flipInX " id="btncitas" type="image"  src="img/citas medicas hoverinicio.png" name="">
@@ -111,17 +110,10 @@
         <div class="contenedor">
 
             <h3>Citas medicas agregadas</h3>
-            <div class="contenedorinterno">
-               
-            </div>
-            <br>
-            <div class="contenedorinterno">
-               
-            </div>
-            <br>
-            <div class="contenedorinterno">
-               
-            </div>
+            
+            <input class="contenedorinterno" id="citatxt" type="text" class="inputText marginSiete margenAbajo">
+            
+            
         </div>
 
         <div class="contenedor5">
@@ -129,7 +121,7 @@
             <br>
             <br>
 
-            <input value="Agregar Cita" class="botonesprincipales1   animated flipInX " id="input1" type="image" name="" src="img/citainicio.png" >
+            <input  class="botonesprincipales1   animated flipInX " id="btnguardarCitas" type="image" name="" src="img/citainicio.png" >
         </div>
 
     </section>
@@ -188,48 +180,24 @@
         </div>
 
         <div class="divConfig">
-            <h4 class="colorTipoLetra alinearIzquierda margenSieteIzq paddingArribaAbajo">Nombre del medicamento</h4>
-            <input type="text" class="inputText margenSieteIzq margenAbajo">
+            <h4 class="colorTipoLetra alinearIzquierda marginSiete">Nombre del medicamento</h4>
+            <input id="nombretxt" type="text" class="inputText marginSiete margenAbajo">
         </div>
 
+<<<<<<< HEAD
         <div class="divConfig" id="divConfigurarHorario">
             <h4 class="lista colorTipoLetra alinearIzquierda margenSieteIzq paddingArribaAbajo">Horario de recordatorio</h4>
+=======
+        <div class="divConfig">
+            <h4 class="colorTipoLetra alinearIzquierda marginSiete">Horario de recordatorio</h4>
+            <label>Valor del dropdown</label>
+>>>>>>> 250086d78fd987bac05fae458fc56422454d3c61
             
-            <div class="margenAbajo">
-                <label class="margenSieteIzq">Una vez al día</label>
-                <img src="img/desplegarinicio.png" class="alinearDerecha margenDerecha" id="btnDesplegarInicio">
-            </div>
-
-            <div>
-                <label class="margenSieteIzq">08:00 am</label>
-                <img src="img/cantidadinicio.png" alt="Cantidad" class="alinearDerecha margenDerecha">
-            </div>  
-            <br>  
         </div>
 
-        <div class="divConfig">
-            <div class="paddingArribaAbajo">
-                <label class="lista colorTipoLetra alinearIzquierda margenSieteIzq margenAbajo">Calendario</label>
-                <img src="img/desplegarinicio.png" class="alinearDerecha margenDerecha">
-            </div>
+        <div class="anadirMedicamentos">
+            <input id="btnGuardar" type="image" src="img/anadirMedicinainicio.png">
         </div>
-
-        <div class="divConfig">
-            <div class="paddingArribaAbajo">
-                <h4 class="lista colorTipoLetra alinearIzquierda margenSieteIzq margenAbajo">Personalizar alarma</h4>
-                <div class="alinearCentro">
-                    <img src="img/formainicio.png" alt="Forma" >
-                    <img src="img/colorinicio.png" alt="Color" class="margenLados40">
-                    <img src="img/sonidoinicio.png" alt="Sonido" >
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="alinearCentro">
-            <img src="img/volver principalinicio.png" alt="Volver" class="margenDerecha">
-            <img src="img/hecho principalinicio.png" alt="Hecho" class="margenSieteIzq">
-        </div>
-
     </section>
 
     <div id="divConfigurarDia" class="ocultar">
