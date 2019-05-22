@@ -17,6 +17,8 @@
  * under the License.
  */var pantalladecarga;
  var pantallaprincipal;
+ var usu= new Object();
+ let usuarios;
 
  window.onload = inicio;
 function inicio(){
@@ -45,7 +47,8 @@ var app = {
         document.getElementById("btnMedicamentosACitas").addEventListener("click", mostrarcitas);
         document.getElementById("btnCitasAMedicamentos").addEventListener("click", mostrarMedicamentos);
         document.getElementById("btnAnadirMedicina").addEventListener("click", mostrarAnadirMedicina);
-        document.getElementById("btnDesplegarInicio").addEventListener("click", configurarDias);
+        document.getElementById("btnGuardar").addEventListener("click", guardarMedicamento);
+         document.getElementById("btnguardarCitas").addEventListener("click", guardarCitas);
 
         //acá escucha los botones--------------------------------------------------------------------
     },
@@ -125,9 +128,61 @@ function mostrarAnadirMedicina(){
     document.getElementById("pantallaAnadirMedicina").className = "Pantalla2 animated fadeIn";
 }
 
-function configurarDias(){
 
-    document.getElementById("btnDesplegarInicio").src = "img/desplegar hoverinicio.png";
+function guardarMedicamento(){    
+           
+        /*Captura de datos escrito en los inputs*/    
+        var nom= new Object();    
+         nom = document.getElementById("nombretxt").value;
+        
+        /*Guardando los datos en el LocalStorage*/
+        localStorage.setItem("Nombre", JSON.stringify(nom));
+       
+        /*Limpiando los campos o inputs*/
+        document.getElementById("nombretxt").value = "";
+        
+       
+};
+
+
+
+
+
+function guardarCitas()
+{
+    var citas = document.getElementById("citatxt").value;
+    
+    if (citas.length>0)
+    {                       
+            var Usuario= new Object();
+            
+            Usuario.citas=citas;
+            
+            let usuarios = localStorage.getItem("Usuarios") != null ? JSON.parse(localStorage.getItem("Usuarios")) : [];
+            usu = usuarios.filter(function (usuario) { return usuario.citas == citas; });
+            
+
+            if (usu.length>0)
+            {
+                alert("Ya se encuentra registrado este correo,intentelo con otro");
+
+            }
+            else
+            {
+                //toda cambiarlo para que vaya a otra pantalla
+                usuarios.push(Usuario);
+                localStorage.setItem("Usuarios", JSON.stringify(usuarios));
+                  
+                
+            }
+            
+    }
+    else
+    {
+        alert("rellene los campos");
+    }
+    
+    
 }
 
 
