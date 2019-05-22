@@ -230,7 +230,6 @@ label{
 }
 
 .margenAbajo{
-<<<<<<< HEAD
     margin-bottom: 12px;
 }
 
@@ -250,9 +249,6 @@ label{
 .margenLados40{
 
     margin: 0px 40px;
-=======
-    margin-bottom: 10px;
->>>>>>> 250086d78fd987bac05fae458fc56422454d3c61
 }
 
 .divConfig{
@@ -263,8 +259,16 @@ label{
     background-color: blue;
 }
 
+.alto90{
+    height: 90px;
+}
+
 .alinearIzquierda{
     text-align: left;
+}
+
+.alinearDerecha{	
+    float: right;
 }
 
 .alinearCentro{
@@ -279,7 +283,6 @@ label{
     background-color: blue;
     width: 300px;
     color: white;
-<<<<<<< HEAD
 }
 
 #divConfigurarDia{
@@ -292,8 +295,5 @@ label{
 }
 
 .zindex{
-
     z-index: 2;
-=======
->>>>>>> 250086d78fd987bac05fae458fc56422454d3c61
 }

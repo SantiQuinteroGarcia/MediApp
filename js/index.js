@@ -15,12 +15,13 @@
  * KIND, either express or implied.  See the License for the
  * specific language governing permissions and limitations
  * under the License.
- */var pantalladecarga;
- var pantallaprincipal;
- var usu= new Object();
- let usuarios;
+ */
+var pantalladecarga;
+var pantallaprincipal;
+var usu= new Object();
+let usuarios;
 
- window.onload = inicio;
+window.onload = inicio;
 function inicio(){
 
     inicializarvariables();
@@ -31,7 +32,7 @@ function main(){
     
     mostrarpantalla(pantalladecarga);
     setTimeout("cambiopantalla(pantallaprincipal,pantalladecarga)", 1000);
-    }
+}
 
 
 var app = {
@@ -47,13 +48,10 @@ var app = {
         document.getElementById("btnMedicamentosACitas").addEventListener("click", mostrarcitas);
         document.getElementById("btnCitasAMedicamentos").addEventListener("click", mostrarMedicamentos);
         document.getElementById("btnAnadirMedicina").addEventListener("click", mostrarAnadirMedicina);
-<<<<<<< HEAD
         document.getElementById("btnDesplegarInicio").addEventListener("click", configurarDias);
         document.getElementById("btnCerrarConfigurarDia").addEventListener("click", seguirConfigurandoMedicina);
-=======
         document.getElementById("btnGuardar").addEventListener("click", guardarMedicamento);
-         document.getElementById("btnguardarCitas").addEventListener("click", guardarCitas);
->>>>>>> 250086d78fd987bac05fae458fc56422454d3c61
+        document.getElementById("btnguardarCitas").addEventListener("click", guardarCitas);
 
         //acá escucha los botones--------------------------------------------------------------------
     },
@@ -78,10 +76,6 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-
-
-
-
 
 function inicializarvariables(){
  
@@ -133,8 +127,8 @@ function mostrarAnadirMedicina(){
     document.getElementById("pantallaAnadirMedicina").className = "Pantalla2 animated fadeIn";
 }
 
-
-<<<<<<< HEAD
+function configurarDias(){
+    
     document.getElementById("btnDesplegarInicio").src = "img/desplegar hoverinicio.png";
     document.getElementById("divConfigurarDia").className = "zindex";
 }
@@ -143,7 +137,8 @@ function seguirConfigurandoMedicina(){
 
     document.getElementById("btnDesplegarInicio").src = "img/desplegarinicio.png";
     document.getElementById("divConfigurarDia").className = "ocultar";
-=======
+}
+
 function guardarMedicamento(){    
            
         /*Captura de datos escrito en los inputs*/    
@@ -155,13 +150,7 @@ function guardarMedicamento(){
        
         /*Limpiando los campos o inputs*/
         document.getElementById("nombretxt").value = "";
-        
-       
 };
-
-
-
-
 
 function guardarCitas()
 {
@@ -187,22 +176,12 @@ function guardarCitas()
                 //toda cambiarlo para que vaya a otra pantalla
                 usuarios.push(Usuario);
                 localStorage.setItem("Usuarios", JSON.stringify(usuarios));
-                  
-                
             }
-            
     }
     else
     {
         alert("rellene los campos");
     }
-    
-    
->>>>>>> 250086d78fd987bac05fae458fc56422454d3c61
 }
-
-
-
-//acá pone las funciones-------------------------------------------------------------------------------------
 
 app.initialize();
