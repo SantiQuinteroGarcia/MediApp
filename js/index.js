@@ -53,6 +53,7 @@ var app = {
         document.getElementById("btnCerrarConfigurarDia").addEventListener("click", seguirConfigurandoMedicina);
         document.getElementById("btnGuardar").addEventListener("click", guardarMedicamento);
         document.getElementById("btnguardarCitas").addEventListener("click", guardarCitas);
+        document.getElementById("btnVolverAInicio").addEventListener("click", mostrarInicio);
 
         //acá escucha los botones--------------------------------------------------------------------
     },
@@ -129,15 +130,20 @@ function mostrarAnadirMedicina(){
 }
 
 function configurarDias(){
-    
+
     document.getElementById("btnDesplegarInicio").src = "img/desplegar hoverinicio.png";
     document.getElementById("divConfigurarDia").className = "zindex";
+    document.getElementById("divConfigurarHorario").className = "divConfigZindex";
+
 }
 
 function seguirConfigurandoMedicina(){
 
     document.getElementById("btnDesplegarInicio").src = "img/desplegarinicio.png";
     document.getElementById("divConfigurarDia").className = "ocultar";
+    document.getElementById("divConfigurarHorario").className = "divConfig alto90";
+    document.getElementById("oscuro").className = "ocultar";
+
 }
 
 function guardarMedicamento(){    
