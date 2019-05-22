@@ -45,6 +45,7 @@ var app = {
         document.getElementById("btnMedicamentosACitas").addEventListener("click", mostrarcitas);
         document.getElementById("btnCitasAMedicamentos").addEventListener("click", mostrarMedicamentos);
         document.getElementById("btnAnadirMedicina").addEventListener("click", mostrarAnadirMedicina);
+        document.getElementById("btnDesplegarInicio").addEventListener("click", configurarDias);
 
         //acá escucha los botones--------------------------------------------------------------------
     },
@@ -124,7 +125,10 @@ function mostrarAnadirMedicina(){
     document.getElementById("pantallaAnadirMedicina").className = "Pantalla2 animated fadeIn";
 }
 
+function configurarDias(){
 
+    document.getElementById("btnDesplegarInicio").src = "img/desplegar hoverinicio.png";
+}
 
 
 

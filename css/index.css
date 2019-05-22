@@ -220,12 +220,30 @@ label{
     vertical-align: middle;
 }
 
-.marginSiete{
-    margin: 0px 7px;
+.margen45Izq{
+    margin-left: 45px;
+}
+
+.margenSieteIzq{
+    margin: 0px 10px;
 }
 
 .margenAbajo{
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+}
+
+.margenDerecha{
+    margin-right: 10px;
+}
+
+.paddingArribaAbajo{
+
+    padding: 7px 0px;
+}
+
+.margenLados40{
+
+    margin: 0px 40px;
 }
 
 .divConfig{
@@ -236,8 +254,8 @@ label{
     background-color: blue;
 }
 
-.alinearIzquierda{
-    text-align: left;
+.alinearDerecha{
+    float: right;
 }
 
 .alinearCentro{
