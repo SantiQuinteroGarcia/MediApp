@@ -18,19 +18,21 @@
  */
 var pantalladecarga;
 var pantallaprincipal;
-var cit= new Object();
- let citasmed;
+var cit = new Object();
+let citasmed;
+var med = new Object();
+let medimed;
 
 
 window.onload = inicio;
-function inicio(){
+function inicio() {
 
     inicializarvariables();
     main();
 }
 
-function main(){
-    
+function main() {
+
     mostrarpantalla(pantalladecarga);
     setTimeout("cambiopantalla(pantallaprincipal,pantalladecarga)", 1000);
 }
@@ -38,7 +40,7 @@ function main(){
 
 var app = {
     // Application Constructor
-    initialize: function() {
+    initialize: function () {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
 
         document.getElementById("btnMedicamentos").addEventListener("click", mostrarMedicamentos);
@@ -50,24 +52,29 @@ var app = {
         document.getElementById("btnCitasAMedicamentos").addEventListener("click", mostrarMedicamentos);
         document.getElementById("btnAnadirMedicina").addEventListener("click", mostrarAnadirMedicina);
         document.getElementById("btnDesplegarInicio").addEventListener("click", configurarDias);
+        document.getElementById("btnCantidadInicio").addEventListener("click", configurarHora);
         document.getElementById("btnCerrarConfigurarDia").addEventListener("click", seguirConfigurandoMedicina);
+        document.getElementById("btnVolverAAnadirMedicina").addEventListener("click", seguirConfigurandoMedicina);
         document.getElementById("btnGuardar").addEventListener("click", guardarMedicamento);
         document.getElementById("btnguardarCitas").addEventListener("click", guardarCitas);
         document.getElementById("btnVolverAInicio").addEventListener("click", mostrarInicio);
+        document.getElementById("btnañadircita2").addEventListener("click", pintarCitas);
 
-        //acá escucha los botones--------------------------------------------------------------------
+        document.getElementById("btnañadircita").addEventListener("click", mostraranadircitas);
+        document.getElementById("btnvolver").addEventListener("click", volvercitas);
+
     },
 
     // deviceready Event Handler
     //
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
-    onDeviceReady: function() {
+    onDeviceReady: function () {
         this.receivedEvent('deviceready');
     },
 
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
+    receivedEvent: function (id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
@@ -79,24 +86,24 @@ var app = {
     }
 };
 
-function inicializarvariables(){
- 
-    pantalladecarga=document.getElementById("pantallacarga");
-    pantallaprincipal=document.getElementById("inicio");
+function inicializarvariables() {
+
+    pantalladecarga = document.getElementById("pantallacarga");
+    pantallaprincipal = document.getElementById("inicio");
 }
 
-function mostrarpantalla(pantalla){
+function mostrarpantalla(pantalla) {
 
-    pantalla.className = pantalla.className.replace( /(?:^|\s)ocultar(?!\S)/g , '' );
+    pantalla.className = pantalla.className.replace(/(?:^|\s)ocultar(?!\S)/g, '');
 }
 
- function cambiopantalla(pantalla, pantallaanterior){
-    
+function cambiopantalla(pantalla, pantallaanterior) {
+
     pantallaanterior.className += " ocultar";
-    pantalla.className = pantalla.className.replace( /(?:^|\s)ocultar(?!\S)/g , '' );
+    pantalla.className = pantalla.className.replace(/(?:^|\s)ocultar(?!\S)/g, '');
 }
 
-function ocultar(){
+function ocultar() {
 
     document.getElementById("pantallacarga").className = "ocultar";
     document.getElementById("inicio").className = "ocultar";
@@ -105,94 +112,170 @@ function ocultar(){
     document.getElementById("pantallaAnadirMedicina").className = "ocultar";
 }
 
-function mostrarInicio(){
+function mostrarInicio() {
 
     ocultar();
     document.getElementById("inicio").className = "Pantalla1 animated fadeIn";
 }
 
-function mostrarMedicamentos(){
+function mostrarMedicamentos() {
 
     ocultar();
     document.getElementById("pantallaMedicamentos").className = "Pantalla2 animated fadeIn";
 }
 
-function mostrarcitas(){
+function mostrarcitas() {
 
     ocultar();
     document.getElementById("citas").className = "Pantalla2 animated fadeIn";
 }
 
-function mostrarAnadirMedicina(){
+function volvercitas() {
+
+    pantallaAnadirCita.className += " ocultar";
+    document.getElementById("citas").className = "Pantalla2 animated fadeIn";
+}
+
+function mostrarAnadirMedicina() {
 
     ocultar();
     document.getElementById("pantallaAnadirMedicina").className = "Pantalla2 animated fadeIn";
 }
 
-function configurarDias(){
+function mostraranadircitas() {
+
+    ocultar();
+    document.getElementById("pantallaAnadirCita").className = "Pantalla2 animated fadeIn";
+}
+
+function configurarDias() {
 
     document.getElementById("btnDesplegarInicio").src = "img/desplegar hoverinicio.png";
     document.getElementById("divConfigurarDia").className = "zindex";
-    document.getElementById("divConfigurarHorario").className = "divConfigZindex";
+    //document.getElementById("divConfigurarHorario").className = "divConfigZindex";
 
 }
 
-function seguirConfigurandoMedicina(){
+function configurarHora() {
+
+    document.getElementById("btnCantidadInicio").src = "img/desplegar hoverinicio.png";
+    document.getElementById("divConfigurarHora").className = "zindex";
+}
+
+function seguirConfigurandoMedicina() {
 
     document.getElementById("btnDesplegarInicio").src = "img/desplegarinicio.png";
     document.getElementById("divConfigurarDia").className = "ocultar";
-    document.getElementById("divConfigurarHorario").className = "divConfig alto90";
-    document.getElementById("oscuro").className = "ocultar";
+    //document.getElementById("divConfigurarHorario").className = "divConfig alto90";
+
+    document.getElementById("btnCantidadInicio").src = "img/cantidadinicio.png";
+    document.getElementById("divConfigurarHora").className = "ocultar";
 
 }
 
-function guardarMedicamento(){    
-           
-        /*Captura de datos escrito en los inputs*/    
-        var nom= new Object();    
-         nom = document.getElementById("nombretxt").value;
-        
-        /*Guardando los datos en el LocalStorage*/
-        localStorage.setItem("Nombre", JSON.stringify(nom));
-       
-        /*Limpiando los campos o inputs*/
-        document.getElementById("nombretxt").value = "";
-};
+function guardarMedicamento() {
 
-function guardarCitas()
-{
-    var citas = document.getElementById("citatxt").value;
-    
-    if (citas.length>0)
-    {                       
-            var CitasMedicas= new Object();
-            
-            CitasMedicas.citas=citas;
-            
-            let citasmed = localStorage.getItem("CitasMedicas") != null ? JSON.parse(localStorage.getItem("CitasMedicas")) : [];
-            cit = citasmed.filter(function (citasmed) { return citasmed.citas == citas; });
-            
+    var medicamento = document.getElementById("nombremedtxt").value;
+    var cantidad = document.getElementById("cantidadtxt").value;
+    var hora2 = document.getElementById("horamedtxt").value;
+    var fecha2 = document.getElementById("diatxt").value;
 
-            if (cit.length>0)
-            {
-                alert("Ya se encuentra registrado este correo,intentelo con otro");
 
-            }
-            else
-            {
-                //toda cambiarlo para que vaya a otra pantalla
-                citasmed.push(CitasMedicas);
-                localStorage.setItem("CitasMedicas", JSON.stringify(citasmed));
-                  
-                
-            }
-            
+
+    if (medicamento.length > 0 && cantidad.length > 0 && fecha2.length > 0) {
+        var medicamentosmedicos = new Object();
+
+        medicamentosmedicos.medicamento = medicamento;
+        medicamentosmedicos.cantidad = cantidad;
+        medicamentosmedicos.hora2 = hora2;
+        medicamentosmedicos.fecha2 = fecha2;
+
+
+        let medimed = localStorage.getItem("medicamentosmedicos") != null ? JSON.parse(localStorage.getItem("medicamentosmedicos")) : [];
+        med = medimed.filter(function (medimed) { return medimed.medicamento == medicamento; });
+
+
+        if (med.length > 0) {
+            alert("Ya se encuentra registrado este titulo de citas , por favor intentelo con otro");
+
+        }
+        else {
+            //toda cambiarlo para que vaya a otra pantalla
+            medimed.push(medicamentosmedicos);
+            localStorage.setItem("medicamentosmedicos", JSON.stringify(medimed));
+
+            document.getElementById("nombremedtxt").value = "";
+            document.getElementById("medicotxt").value = "";
+            document.getElementById("fechatxt").value = "";
+            document.getElementById("horatxt").value = "";
+
+
+        }
     }
-    else
-    {
+    else {
         alert("rellene los campos");
     }
-    
-    
 }
+
+function guardarCitas() {
+    var citas = document.getElementById("citatxt").value;
+    var medico = document.getElementById("medicotxt").value;
+    var clinica = document.getElementById("clinicatxt").value;
+    var fecha = document.getElementById("fechatxt").value;
+    var hora = document.getElementById("horatxt").value;
+
+
+    if (citas.length > 0 && medico.length > 0 && clinica.length > 0 && fecha.length > 0 && hora.length > 0) {
+        var CitasMedica = new Object();
+
+        CitasMedica.citas = citas;
+        CitasMedica.medico = medico;
+        CitasMedica.clinica = clinica;
+        CitasMedica.fecha = fecha;
+        CitasMedica.hora = hora;
+
+        let citasmed = localStorage.getItem("CitasMedica") != null ? JSON.parse(localStorage.getItem("CitasMedica")) : [];
+        cit = citasmed.filter(function (citasmed) { return citasmed.citas == citas; });
+
+
+        if (cit.length > 0) {
+            alert("Ya se encuentra registrado este titulo de citas , por favor intentelo con otro");
+
+        }
+        else {
+            //toda cambiarlo para que vaya a otra pantalla
+            citasmed.push(CitasMedica);
+            localStorage.setItem("CitasMedica", JSON.stringify(citasmed));
+
+            document.getElementById("citatxt").value = "";
+            document.getElementById("medicotxt").value = "";
+            document.getElementById("clinicatxt").value = "";
+            document.getElementById("fechatxt").value = "";
+            document.getElementById("horatxt").value = "";
+        }
+
+    }
+    else {
+        alert("rellene los campos");
+    }
+}
+
+function pintarCitas() {
+
+
+    //se recorre el arreglo de rutinas  
+    var i = 0
+
+    var nombrecitas = localStorage.getItem("CitasMedica");
+    var listacitas = JSON.parse(nombrecitas);
+    console.log(listacitas);
+
+
+    /*Mostrar datos almacenados*/
+    for (i = 0; i < listacitas.length; i++) {
+        document.getElementById("nombrecitas").innerHTML = listacitas[i].citas;
+    }
+
+}
+
 app.initialize();
