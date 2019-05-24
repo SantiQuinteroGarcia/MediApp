@@ -24,6 +24,8 @@ var med = new Object();
 let medimed;
 
 
+var audio, play, stop;
+
 window.onload = inicio;
 function inicio() {
 
@@ -70,6 +72,12 @@ var app = {
         document.getElementById("btnCerrarConfigurarForma").addEventListener("click", seguirConfigurandoMedicina);
         document.getElementById("btnCerrarConfigurarColor").addEventListener("click", seguirConfigurandoMedicina);
 
+        audio = document.createElement('audio');
+        audio.setAttribute('autoplay', 'autoplay');
+        audio.setAttribute('loop', 'loop');
+        document.getElementById("cancionUno").addEventListener("click", reproducirCancionUno);
+        document.getElementById("cancionDos").addEventListener("click", reproducirCancionDos);
+        document.getElementById("cancionTres").addEventListener("click", reproducirCancionTres);
     },
 
     // deviceready Event Handler
@@ -204,6 +212,60 @@ function seguirConfigurandoMedicina() {
 
     document.getElementById("btnConfigurarSonido").src = "img/sonidoinicio.png";
     document.getElementById("divConfigurarSonido").className = "ocultar";
+
+    audio.pause();
+}
+
+function reproducirCancionUno(){
+    audio.pause();
+    audio.setAttribute('src', 'sounds/BigHornsIntro.mp3');
+
+    document.getElementById("divCancionUno").className = "margenArriba divSonidoElegido";
+    document.getElementById("divCancionDos").className = "margenArriba";
+    document.getElementById("divCancionTres").className = "margenArriba";
+    document.getElementById("cancionUno").className = "colorTipoLetra marginSiete letraPequeña";
+    document.getElementById("cancionDos").className = "color2TipoLetra marginSiete letraPequeña";
+    document.getElementById("cancionTres").className = "color2TipoLetra marginSiete letraPequeña";
+    document.getElementById("imgCancionUno").src = "img/volumen.png";
+    document.getElementById("imgCancionDos").src = "img/sonido1inicio.png";
+    document.getElementById("imgCancionTres").src = "img/sonido1inicio.png";
+
+    
+    audio.play();
+}
+
+function reproducirCancionDos(){
+    audio.pause();
+    audio.setAttribute('src', 'sounds/LesliesStrutSting.mp3');
+    
+    document.getElementById("divCancionUno").className = "margenArriba";
+    document.getElementById("divCancionDos").className = "margenArriba divSonidoElegido";
+    document.getElementById("divCancionTres").className = "margenArriba";
+    document.getElementById("cancionUno").className = "color2TipoLetra marginSiete letraPequeña";
+    document.getElementById("cancionDos").className = "colorTipoLetra marginSiete letraPequeña";
+    document.getElementById("cancionTres").className = "color2TipoLetra marginSiete letraPequeña";
+    document.getElementById("imgCancionUno").src = "img/sonido1inicio.png";
+    document.getElementById("imgCancionDos").src = "img/volumen.png";
+    document.getElementById("imgCancionTres").src = "img/sonido1inicio.png";
+
+    audio.play();
+}
+
+function reproducirCancionTres(){
+    audio.pause();
+    audio.setAttribute('src', 'sounds/ShortGuitarClip.mp3');
+
+    document.getElementById("divCancionUno").className = "margenArriba";
+    document.getElementById("divCancionDos").className = "margenArriba";
+    document.getElementById("divCancionTres").className = "margenArriba divSonidoElegido";
+    document.getElementById("cancionUno").className = "color2TipoLetra marginSiete letraPequeña";
+    document.getElementById("cancionDos").className = "color2TipoLetra marginSiete letraPequeña";
+    document.getElementById("cancionTres").className = "colorTipoLetra marginSiete letraPequeña";
+    document.getElementById("imgCancionUno").src = "img/sonido1inicio.png";
+    document.getElementById("imgCancionDos").src = "img/sonido1inicio.png";
+    document.getElementById("imgCancionTres").src = "img/volumen.png";
+    
+    audio.play();
 }
 
 function guardarMedicamento() {
