@@ -51,7 +51,7 @@
 
         <div class="divMostrar" id="divCalendarioMedicinas">
 
-            <h2 class="lista fuenteTitulos marginSiete alinearIzquierda margenAbajo paddingArribaAbajo">Calendario de
+            <h2 class="fuenteTitulos marginSiete alinearIzquierda margenAbajo paddingArribaAbajo">Calendario de
                 medicinas</h2>
 
             <div id="divCalendarioUno">
@@ -131,18 +131,29 @@
 
         <div id="divMedicamenosPorTomar" class="divMostrar">
 
-            <h2 class="lista fuenteTitulos marginSiete alinearIzquierda margenAbajo paddingArribaAbajo">Medicamentos por tomar</h2>
+            <h2 class="fuenteTitulos marginSiete alinearIzquierda margenAbajo paddingArribaAbajo">Medicamentos por tomar</h2>
+
+            <div class="paddingAbajo">
+                <img src="img/color4inicio.png" class="centrarVerticalmente">
+                <label class="centrarVerticalmente">Dolex Gripa</label>
+                <img src="img/horasinicio.png" value="Horas: 08:00 am" class="centrarVerticalmente">
+            </div>
+
+            <div class="paddingAbajo">
+                <img src="img/color2inicio.png" class="centrarVerticalmente">
+                <label class="centrarVerticalmente">Dolex Gripa</label>
+                <img src="img/horasinicio.png" value="Horas: 08:00 am" class="centrarVerticalmente">
+            </div>
 
             <div class="paddingAbajo">
                 <img src="img/color5inicio.png" class="centrarVerticalmente">
                 <label class="centrarVerticalmente">Dolex Gripa</label>
                 <img src="img/horasinicio.png" value="Horas: 08:00 am" class="centrarVerticalmente">
             </div>
-
         </div>
 
          <div class="anadirMedicamentos" id="divBtnAnadirMedicina">
-            <input id="btnAnadirMedicina" type="image" src="img/anadirMedicinainicio.png">
+            <input id="btnAnadirMedicinaDesdeInicio" type="image" src="img/anadirMedicinainicio.png">
         </div>
 
         <div id="cabecera" class="menu">
@@ -202,7 +213,7 @@
         </div>
 
         <div class="divMostrar">
-            <h3 class="lista fuenteTitulos alinearCentro margenAbajo paddingArribaAbajo">Lista de medicamentos activos
+            <h3 class="fuenteTitulos alinearCentro margenAbajo paddingArribaAbajo">Lista de medicamentos activos
             </h3>
 
             <div class="paddingAbajo">
@@ -298,7 +309,7 @@
         </div>
 
         <div class="divConfig alto90" id="divConfigurarHorario">
-            <h4 class="lista fuenteTitulos alinearIzquierda marginSiete paddingArribaAbajo">Horario de recordatorio</h4>
+            <h4 class="fuenteTitulos alinearIzquierda marginSiete paddingArribaAbajo">Horario de recordatorio</h4>
 
             <div class="margenAbajo">
                 <label class="marginSiete">¿Qué días?</label>
@@ -321,16 +332,16 @@
 
         <div class="divConfig">
             <!--<div class="paddingArribaAbajo">
-                <label class="lista colorTipoLetra alinearIzquierda marginSiete margenAbajo">Calendario</label>
+                <label class="colorTipoLetra alinearIzquierda marginSiete margenAbajo">Calendario</label>
                 <img src="img/desplegarinicio.png" class="alinearDerecha margenDerecha">
             </div>-->
 
-            <h4 class="lista fuenteTitulos alinearIzquierda marginSiete paddingArribaAbajo">Calendario</h4>
+            <h4 class="fuenteTitulos alinearIzquierda marginSiete paddingArribaAbajo">Calendario</h4>
             <input id="horamedtxt" type="date" class="inputText marginSiete margenAbajo">
         </div>
 
         <div class="divConfig alto90">
-            <h4 class="lista fuenteTitulos alinearIzquierda marginSiete margenAbajo paddingArribaAbajo">Personalizar
+            <h4 class="fuenteTitulos alinearIzquierda marginSiete margenAbajo paddingArribaAbajo">Personalizar
                 alarma</h4>
             <div class="alinearCentro">
                 <img src="img/formainicio.png" alt="Forma" id="btnConfigurarForma">
@@ -378,7 +389,7 @@
     </div>
 
     <div id="divConfigurarHora" class="ocultar">
-        <h5 class="color2TipoLetra lista2 margenArriba margenAbajo alinearCentro">Escribe aquí la dosis pre-escrita</h5>
+        <h5 class="color2TipoLetra margenArriba margenAbajo alinearCentro">Escribe aquí la dosis pre-escrita</h5>
         <div class="alinearCentro">
             <input type="text" placeholder="cantidad" class="inputCantidad" id="cantidadtxt">
             <input type="text" placeholder="unidad(ej. mg)" class="inputCantidad">
@@ -392,7 +403,7 @@
 
     <div id="divConfigurarForma" class="ocultar">
         <div class="paddingArribaAbajo">
-            <label class="color2TipoLetra lista2 margenArriba margenAbajo marginSiete">Forma</label>
+            <label class="color2TipoLetra margenArriba margenAbajo marginSiete">Forma</label>
             <img src="img/cerrarinicio.png" id="btnCerrarConfigurarForma" class="alinearDerecha margenDerecha">
         </div>
         <br>
@@ -405,7 +416,7 @@
 
     <div id="divConfigurarColor" class="ocultar">
         <div class="paddingArribaAbajo">
-            <label class="color2TipoLetra lista2 margenArriba marginSiete">Color</label>
+            <label class="color2TipoLetra margenArriba marginSiete">Color</label>
             <img src="img/cerrarinicio.png" id="btnCerrarConfigurarColor" class="alinearDerecha margenDerecha">
         </div>
         <div class="alinearCentro">
@@ -421,7 +432,7 @@
     </div>
 
     <div id="divConfigurarSonido" class="ocultar">
-        <h5 class="color2TipoLetra lista2 margenArriba alinearCentro">Sonido</h5>
+        <h5 class="color2TipoLetra margenArriba alinearCentro">Sonido</h5>
 
         <div class="margenArriba" id="divCancionUno">
             <label class="color2TipoLetra marginSiete letraPequeña" id="cancionUno">Big Horns Intro</label>

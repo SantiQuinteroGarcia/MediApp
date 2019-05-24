@@ -27,7 +27,7 @@
 }
 
 .pantalladecarga{
-    background:url('../img/fondocargainicial.png') no-repeat center center;
+    background:url('../img/1.png') no-repeat center center;
     width: 360px;
     height: 616px;
     position: absolute;
@@ -152,7 +152,6 @@
     width: 40px;
     height: 40px;
     background-color: white;
-    border: 1px;
     border-radius: 25px;
 }
 
@@ -193,11 +192,21 @@
 
 h1{
     margin: 0 auto;
+    font-size: 29px;
+}
+
+h4{
+    font-size: 18px;
+}
+
+h2, h3, h4{
+    letter-spacing: 1px;
 }
 
 .colorTipoLetra{
     color: white;
     font-family: sans-serif;
+    
 }
 
 .fuenteTitulos{
@@ -208,16 +217,6 @@ h1{
 .color2TipoLetra{
     color: #0071BC;
     font-family: sans-serif;
-}
-
-.lista{
-    text-decoration: underline white;
-    margin-bottom: 5px;
-}
-
-.lista2{
-    text-decoration: underline #0071BC;
-    margin-bottom: 5px;
 }
 
 label{
@@ -324,7 +323,7 @@ label{
     margin: 0 auto;
     margin-bottom: 30px;
     border-radius: 15px;
-    background-color: rgb(255,255,255, 0.4);
+    background-color: rgb(255,255,255, 0.3);
 }
 
 .divConfigZindex{

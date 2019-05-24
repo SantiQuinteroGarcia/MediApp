@@ -54,6 +54,7 @@ var app = {
         document.getElementById("btnMedicamentosACitas").addEventListener("click", mostrarcitas);
         document.getElementById("btnCitasAMedicamentos").addEventListener("click", mostrarMedicamentos);
         document.getElementById("btnAnadirMedicina").addEventListener("click", mostrarAnadirMedicina);
+        document.getElementById("btnAnadirMedicinaDesdeInicio").addEventListener("click", mostrarAnadirMedicina);
         document.getElementById("btnDesplegarInicio").addEventListener("click", configurarDias);
         document.getElementById("btnCantidadInicio").addEventListener("click", configurarHora);
         document.getElementById("btnCerrarConfigurarDia").addEventListener("click", seguirConfigurandoMedicina);
