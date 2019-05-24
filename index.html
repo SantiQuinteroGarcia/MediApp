@@ -243,37 +243,40 @@
             <h4 class="lista colorTipoLetra alinearIzquierda marginSiete paddingArribaAbajo">Horario de recordatorio</h4>
 
             <div class="margenAbajo">
-                <label class="marginSiete">Una vez al día</label>
+                <label class="marginSiete">¿Qué días?</label>
                 <img src="img/desplegarinicio.png" class="alinearDerecha margenDerecha" id="btnDesplegarInicio">
             </div>
 
             <div>
-                <label class="marginSiete">08:00 am</label>
-                <img src="img/cantidadinicio.png" alt="Cantidad" class="alinearDerecha margenDerecha"
-                    id="btnCantidadInicio">
+                <label class="marginSiete">Hora a tomar</label>
+                <input id="horamedtxt" type="time" class="inputText marginSiete margenAbajo tamanoInput">
+                <img src="img/cantidadinicio.png" alt="Cantidad" class="alinearDerecha margenDerecha" id="btnCantidadInicio">
             </div>
         </div>
 
 
-        <div class="divConfig">
+        <!--<div class="divConfig">
             <h4 class="colorTipoLetra alinearIzquierda marginSiete paddingArribaAbajo">Hora a tomar</h4>
             <input id="horamedtxt" type="text" class="inputText marginSiete margenAbajo">
-        </div>
+        </div>-->
 
         <div class="divConfig">
-            <div class="paddingArribaAbajo">
+            <!--<div class="paddingArribaAbajo">
                 <label class="lista colorTipoLetra alinearIzquierda marginSiete margenAbajo">Calendario</label>
                 <img src="img/desplegarinicio.png" class="alinearDerecha margenDerecha">
-            </div>
+            </div>-->
+
+            <h4 class="lista colorTipoLetra alinearIzquierda marginSiete paddingArribaAbajo">Calendario</h4>
+            <input id="horamedtxt" type="date" class="inputText marginSiete margenAbajo">
         </div>
 
         <div class="divConfig alto90">
             <h4 class="lista colorTipoLetra alinearIzquierda marginSiete margenAbajo paddingArribaAbajo">Personalizar
                 alarma</h4>
             <div class="alinearCentro">
-                <img src="img/formainicio.png" alt="Forma">
-                <img src="img/colorinicio.png" alt="Color" class="margenLados40">
-                <img src="img/sonidoinicio.png" alt="Sonido">
+                <img src="img/formainicio.png" alt="Forma" id="btnConfigurarForma">
+                <img src="img/colorinicio.png" alt="Color" class="margenLados40" id="btnConfigurarColor">
+                <img src="img/sonidoinicio.png" alt="Sonido" id="btnConfigurarSonido">
             </div>
         </div>
         </div>
@@ -314,9 +317,61 @@
             <input type="text" placeholder="unidad(ej. mg)" class="inputCantidad">
         </div>
         <div class="alinearCentro fondoAzul margenGeneral">
-            <img src="img/volverinicio.png" alt="Volver" class="margenDerecha margenArriba"
-                id="btnVolverAAnadirMedicina">
+            <img src="img/volverinicio.png" alt="Volver" class="margenDerecha margenArriba" id="btnVolverAAnadirMedicina">
             <img src="img/hechoinicio.png" alt="Hecho" class="margenArriba" id="btnHechoCantidad">
+        </div>
+    </div>
+
+    <div id="divConfigurarForma" class="ocultar">
+        <div class="paddingArribaAbajo">
+            <label class="color2TipoLetra lista2 margenArriba margenAbajo marginSiete">Forma</label>
+            <img src="img/cerrarinicio.png" id="btnCerrarConfigurarForma" class="alinearDerecha margenDerecha">
+        </div>
+        <br>
+        <div class="alinearCentro">
+            <img src="img/forma1inicio.png" class="margenAbajo" id="formaUno">
+            <img src="img/forma2inicio.png" class="margenAbajo mar" id="formaDos">
+            <img src="img/forma3inicio.png" class="margenAbajo" id="formaTres">
+        </div>
+    </div>
+
+    <div id="divConfigurarColor" class="ocultar">
+        <div class="paddingArribaAbajo">
+            <label class="color2TipoLetra lista2 margenArriba marginSiete">Color</label>
+            <img src="img/cerrarinicio.png" id="btnCerrarConfigurarColor" class="alinearDerecha margenDerecha">
+        </div>
+        <div class="alinearCentro">
+            <img src="img/color1inicio.png">
+            <img src="img/color2inicio.png">
+            <img src="img/color3inicio.png">
+        </div>
+        <div class="alinearCentro">
+            <img src="img/color4inicio.png">
+            <img src="img/color5inicio.png">
+            <img src="img/color6inicio.png">
+        </div>
+    </div>
+
+    <div id="divConfigurarSonido" class="ocultar">
+        <h5 class="color2TipoLetra lista2 margenArriba alinearCentro">Sonido</h5>
+        
+        <div class="margenArriba">
+            <label class="color2TipoLetra marginSiete letraPequeña" id="cancionUno">Big Horns Intro</label>
+            <img src="img/sonido1inicio.png" class="alinearDerecha margenDerecha margenArriba">
+        </div>
+        <div class="margenArriba divSonidoElegido">
+            <!--<img src="img/sonido1 hoverinicio.png" value="Short Guitar Clip" class="alinearDerecha margenDerecha">
+            <input value="Short Guitar Clip" class="alinearDerecha margenDerecha" id="" type="image" src="img/sonido1 hoverinicio.png">-->
+            <label class="colorTipoLetra marginSiete letraPequeña" id="cancionUno">Short Guitar Clip</label>
+            <img src="img/sonido1inicio.png" class="alinearDerecha margenDerecha margenArriba">
+        </div>
+        <div class="margenArriba">
+            <label class="color2TipoLetra marginSiete letraPequeña" id="cancionDos">LesliesStrutSting</label>
+            <img src="img/sonido1inicio.png" class="alinearDerecha margenDerecha margenArriba">
+        </div>
+        <div class="alinearCentro fondoAzul margenGeneral">
+            <img src="img/volverinicio.png" alt="Volver" class="margenDerecha margenArriba" id="btnVolverDeSonidoAAnadirMedicina">
+            <img src="img/hechoinicio.png" alt="Hecho" class="margenArriba" id="btnHechoSonido">
         </div>
     </div>
 

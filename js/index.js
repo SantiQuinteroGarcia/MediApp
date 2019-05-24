@@ -55,6 +55,7 @@ var app = {
         document.getElementById("btnCantidadInicio").addEventListener("click", configurarHora);
         document.getElementById("btnCerrarConfigurarDia").addEventListener("click", seguirConfigurandoMedicina);
         document.getElementById("btnVolverAAnadirMedicina").addEventListener("click", seguirConfigurandoMedicina);
+        document.getElementById("btnVolverDeSonidoAAnadirMedicina").addEventListener("click", seguirConfigurandoMedicina);
         document.getElementById("btnGuardar").addEventListener("click", guardarMedicamento);
         document.getElementById("btnguardarCitas").addEventListener("click", guardarCitas);
         document.getElementById("btnVolverAInicio").addEventListener("click", mostrarInicio);
@@ -62,6 +63,12 @@ var app = {
 
         document.getElementById("btnañadircita").addEventListener("click", mostraranadircitas);
         document.getElementById("btnvolver").addEventListener("click", volvercitas);
+        
+        document.getElementById("btnConfigurarForma").addEventListener("click", configurarForma);
+        document.getElementById("btnConfigurarColor").addEventListener("click", configurarColor);
+        document.getElementById("btnConfigurarSonido").addEventListener("click", configurarSonido);
+        document.getElementById("btnCerrarConfigurarForma").addEventListener("click", seguirConfigurandoMedicina);
+        document.getElementById("btnCerrarConfigurarColor").addEventListener("click", seguirConfigurandoMedicina);
 
     },
 
@@ -162,6 +169,24 @@ function configurarHora() {
     document.getElementById("divConfigurarHora").className = "zindex";
 }
 
+function configurarForma(){
+
+    document.getElementById("btnConfigurarForma").src = "img/forma hoverinicio.png";
+    document.getElementById("divConfigurarForma").className = "zindex";
+}
+
+function configurarColor(){
+
+    document.getElementById("btnConfigurarColor").src = "img/color hoverinicio.png";
+    document.getElementById("divConfigurarColor").className = "zindex";
+}
+
+function configurarSonido(){
+
+    document.getElementById("btnConfigurarSonido").src = "img/sonido hoverinicio.png";
+    document.getElementById("divConfigurarSonido").className = "zindex";
+}
+
 function seguirConfigurandoMedicina() {
 
     document.getElementById("btnDesplegarInicio").src = "img/desplegarinicio.png";
@@ -171,6 +196,14 @@ function seguirConfigurandoMedicina() {
     document.getElementById("btnCantidadInicio").src = "img/cantidadinicio.png";
     document.getElementById("divConfigurarHora").className = "ocultar";
 
+    document.getElementById("btnConfigurarForma").src = "img/formainicio.png";
+    document.getElementById("divConfigurarForma").className = "ocultar";
+
+    document.getElementById("btnConfigurarColor").src = "img/colorinicio.png";
+    document.getElementById("divConfigurarColor").className = "ocultar";
+
+    document.getElementById("btnConfigurarSonido").src = "img/sonidoinicio.png";
+    document.getElementById("divConfigurarSonido").className = "ocultar";
 }
 
 function guardarMedicamento() {
