@@ -97,6 +97,7 @@
     position: relative;
 }
 
+/*
 .cabecera {
     border: 1px solid black;
     width: 331px;
@@ -117,6 +118,18 @@
     top: 40px;
     left: 5px;
 }
+
+.contenedor2{
+        
+    border: 1px solid black;
+    width: 345px;
+    height: 108px;
+    position: absolute;
+    top: 294px;
+    left: 5px;
+}
+*/
+
 .contenedorinterno {
     border-radius: 21px;
     border: 2px solid black;
@@ -127,16 +140,6 @@
     left: 19px;
     background: white;
 }
-
-.contenedor2{
-        
-        border: 1px solid black;
-    width: 345px;
-    height: 108px;
-    position: absolute;
-    top: 294px;
-    left: 5px;
-}
 .contenedor5 {    
     width: 444px;
     height: 35px;
@@ -146,12 +149,11 @@
 }
 
 .number{
-    border-radius: 88px;
-    width: 36px;
-    height: 41px;
-    position: relative;
-    top: -39px;
-    left: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 1px;
+    border-radius: 25px;
 }
 
 .number1{
@@ -178,7 +180,7 @@
     left: 266px;
 }
 
-.tituloMedicamentos{
+.tituloPantalla{
     top: 0px;
     height: 70px;
     width: 300px;
@@ -195,7 +197,7 @@ h1{
 
 .colorTipoLetra{
     color: white;
-    font-family: serif;
+    font-family: sans-serif;
 }
 
 .fuenteTitulos{
@@ -205,7 +207,7 @@ h1{
 
 .color2TipoLetra{
     color: #0071BC;
-    font-family: serif;
+    font-family: sans-serif;
 }
 
 .lista{
@@ -228,7 +230,7 @@ label{
     font-size: 12px;
 }
 
-.imgTituloMedicamentos{
+.imgtituloMedicamentos{
     border-radius: 15px;
     width: 300px;
 }
@@ -253,7 +255,7 @@ label{
     background-color: rgb(46,49,146, 1);
 }
 
-.listaMedicamentos{
+.divMostrar{
     text-align: center;
     width: 315px;
     margin: 0 auto;
@@ -297,6 +299,22 @@ label{
 .margenLados40{
 
     margin: 0px 40px;
+}
+
+#divCalendarioMedicinas{
+    position: relative;
+    top: 60px;
+}
+
+#divMedicamenosPorTomar{
+
+    position: relative;
+    top: 80px;
+}
+
+#divBtnAnadirMedicina{
+    position: relative;
+    top: 70px;
 }
 
 .divConfig{

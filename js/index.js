@@ -25,6 +25,7 @@ let medimed;
 
 
 var audio, play, stop;
+var contadorCalendario = 0;
 
 window.onload = inicio;
 function inicio() {
@@ -78,6 +79,13 @@ var app = {
         document.getElementById("cancionUno").addEventListener("click", reproducirCancionUno);
         document.getElementById("cancionDos").addEventListener("click", reproducirCancionDos);
         document.getElementById("cancionTres").addEventListener("click", reproducirCancionTres);
+
+        document.getElementById("flechaDerechaCalendarioUno").addEventListener("click", mostrarCalendarioDos);
+        document.getElementById("flechaIzquierdaCalendarioDos").addEventListener("click", mostrarCalendarioUno);
+        document.getElementById("flechaDerechaCalendarioTres").addEventListener("click", mostrarCalendarioUno);
+        document.getElementById("flechaDerechaCalendarioDos").addEventListener("click", mostrarCalendarioTres);
+        document.getElementById("flechaIzquierdaCalendarioUno").addEventListener("click", mostrarCalendarioTres);
+        document.getElementById("flechaIzquierdaCalendarioTres").addEventListener("click", mostrarCalendarioDos);
     },
 
     // deviceready Event Handler
@@ -266,6 +274,57 @@ function reproducirCancionTres(){
     document.getElementById("imgCancionTres").src = "img/volumen.png";
     
     audio.play();
+}
+
+function mostrarCalendarioUno(){
+
+    
+    document.getElementById("divCalendarioDos").className = "ocultar";
+    document.getElementById("divCalendarioTres").className = "ocultar";
+
+    if(contadorCalendario == 2){
+        document.getElementById("divCalendarioUno").className = "animated fadeInLeft";
+    }
+
+    if(contadorCalendario == 3){
+        document.getElementById("divCalendarioUno").className = "animated fadeInRight";
+    }
+
+    contadorCalendario = 1;
+}
+
+function mostrarCalendarioDos(){
+
+    document.getElementById("divCalendarioUno").className = "ocultar";
+    document.getElementById("divCalendarioDos").className = "";
+    document.getElementById("divCalendarioTres").className = "ocultar";
+
+    if(contadorCalendario == 3){
+        document.getElementById("divCalendarioDos").className = "animated fadeInLeft";
+    }
+
+    if(contadorCalendario == 1 || contadorCalendario == 0){
+        document.getElementById("divCalendarioDos").className = "animated fadeInRight";
+    }
+
+    contadorCalendario = 2;
+}
+
+function mostrarCalendarioTres(){
+
+    document.getElementById("divCalendarioUno").className = "ocultar";
+    document.getElementById("divCalendarioDos").className = "ocultar";
+    document.getElementById("divCalendarioTres").className = "";
+
+    if(contadorCalendario == 1  || contadorCalendario == 0){
+        document.getElementById("divCalendarioTres").className = "animated fadeInLeft";
+    }
+    if(contadorCalendario == 2){
+
+        document.getElementById("divCalendarioTres").className = "animated fadeInRight";
+    }
+
+    contadorCalendario = 3;
 }
 
 function guardarMedicamento() {
