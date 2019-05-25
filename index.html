@@ -114,7 +114,8 @@
                 </div>
 
                 <div class="alinearIzquierda">
-                    <img src="img/flecha calendario izqinicio.png" class="marginSiete" id="flechaIzquierdaCalendarioTres">
+                    <img src="img/flecha calendario izqinicio.png" class="marginSiete"
+                        id="flechaIzquierdaCalendarioTres">
                     <img src="img/flecha calendario drchainicio.png" class="margenDerecha alinearDerecha"
                         id="flechaDerechaCalendarioTres">
                 </div>
@@ -131,7 +132,8 @@
 
         <div id="divMedicamenosPorTomar" class="divMostrar">
 
-            <h2 class="fuenteTitulos marginSiete alinearIzquierda margenAbajo paddingArribaAbajo">Medicamentos por tomar</h2>
+            <h2 class="fuenteTitulos marginSiete alinearIzquierda margenAbajo paddingArribaAbajo">Medicamentos por tomar
+            </h2>
 
             <div class="paddingAbajo">
                 <img src="img/color4inicio.png" class="centrarVerticalmente">
@@ -141,13 +143,13 @@
 
             <div class="paddingAbajo">
                 <img src="img/color2inicio.png" class="centrarVerticalmente">
-                <label class="centrarVerticalmente"id="porTomar2">Dolex Gripa</label>
+                <label class="centrarVerticalmente" id="porTomar2">Dolex Gripa</label>
                 <img src="img/horasinicio.png" value="Horas: 08:00 am" class="centrarVerticalmente">
             </div>
 
         </div>
 
-         <div class="anadirMedicamentos" id="divBtnAnadirMedicina">
+        <div class="anadirMedicamentos" id="divBtnAnadirMedicina">
             <input id="btnAnadirMedicinaDesdeInicio" type="image" src="img/anadirMedicinainicio.png">
         </div>
 
@@ -219,7 +221,7 @@
 
             <div class="paddingAbajo">
                 <img src="img/color2inicio.png" class="centrarVerticalmente">
-                <label class="centrarVerticalmente"id="porTomar4">Dolex Gripa</label>
+                <label class="centrarVerticalmente" id="porTomar4">Dolex Gripa</label>
                 <img src="img/horasinicio.png" value="Horas: 08:00 am" class="centrarVerticalmente">
             </div>
 
@@ -457,11 +459,36 @@
             <label class="centrarVerticalmente color2TipoLetra" id="porTomar1">Dolex Gripa</label>
             <p class="color2TipoLetra">Programado para las 08:00 am, tomar 1 diario</p>
         </div>
-        
+
         <div class="alinearCentro fondoAzul margenGeneral">
             <img src="img/postergarinicio.png" alt="Volver" class="marginSiete margenArriba" id="btnPostergarAlarma">
-            <img src="img/reprogramarinicio.png" alt="Hecho" class="margenArriba marginSiete" id="btnReprogramarAlarma.png">
+            <img src="img/reprogramarinicio.png" alt="Hecho" class="margenArriba marginSiete"
+                id="btnReprogramarAlarma.png">
         </div>
+
+    </div>
+
+    <div id="divPostergarAlarma" class="ocultar">
+
+        <div class="alinearDerecha margenDerecha paddingArribaAbajo">
+            <img src="img/cerrarinicio.png" id="btnCerrarPostergar">
+        </div>
+        <br>
+        <br>
+        <label class="marginSiete color2TipoLetra">Me olvidé / Me dormí</label>
+        <input type="radio" id="radioUnaVez" value="MeOlvide" name="postergar" class="alinearDerecha margenDerecha">
+        <br>
+        <label class="marginSiete color2TipoLetra">Se me acabó el medicamento</label>
+        <input type="radio" id="radioLunesAViernes" value="SinMedicamento" name="postergar"
+            class="alinearDerecha margenDerecha">
+        <br>
+        <label class="marginSiete color2TipoLetra">Me genera efectos secundarios</label>
+        <input type="radio" id="radioSabadADomin" value="EfectosSecundarios" name="postergar"
+            class="alinearDerecha margenDerecha">
+        <br>
+        <label class="marginSiete color2TipoLetra">Otro</label>
+        <input type="radio" id="radioTodosLosDias" value="Otro" name="postergar"
+            class="alinearDerecha margenDerecha">
 
     </div>
 

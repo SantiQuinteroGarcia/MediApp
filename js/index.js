@@ -91,6 +91,8 @@ var app = {
         document.getElementById("porTomar1").addEventListener("click", configurarAlarma);        
         document.getElementById("porTomar3").addEventListener("click", configurarAlarma);        
         document.getElementById("btnCerrarConfigurarAlarma").addEventListener("click", mostrarInicio);        
+        document.getElementById("btnPostergarAlarma").addEventListener("click", postergarAlarma);        
+        document.getElementById("btnCerrarPostergar").addEventListener("click", configurarAlarma);        
     },
 
     // deviceready Event Handler
@@ -138,84 +140,52 @@ function ocultar() {
     document.getElementById("pantallaMedicamentos").className = "ocultar";
     document.getElementById("citas").className = "ocultar";
     document.getElementById("pantallaAnadirMedicina").className = "ocultar";
+
+    
+
+    document.getElementById("divconfigurarAlarma").className = "ocultar";
+    document.getElementById("divConfigurarDia").className = "ocultar";
+    document.getElementById("divConfigurarHora").className = "ocultar";
+    document.getElementById("divConfigurarForma").className = "ocultar";
+    document.getElementById("divConfigurarSonido").className = "ocultar";
+    document.getElementById("divConfigurarColor").className = "ocultar";
+    document.getElementById("divPostergarAlarma").className ="ocultar";
 }
 
 function mostrarInicio() {
 
     ocultar();
     document.getElementById("inicio").className = "Pantalla1 animated fadeIn";
-
-    document.getElementById("divconfigurarAlarma").className = "ocultar";
-    document.getElementById("divConfigurarDia").className = "ocultar";
-    document.getElementById("divConfigurarHora").className = "ocultar";
-    document.getElementById("divConfigurarForma").className = "ocultar";
-    document.getElementById("divConfigurarSonido").className = "ocultar";
-    document.getElementById("divConfigurarColor").className = "ocultar";
 }
 
 function mostrarMedicamentos() {
 
     ocultar();
     document.getElementById("pantallaMedicamentos").className = "Pantalla2 animated fadeIn";
-
-    document.getElementById("divconfigurarAlarma").className = "ocultar";
-    document.getElementById("divConfigurarDia").className = "ocultar";
-    document.getElementById("divConfigurarHora").className = "ocultar";
-    document.getElementById("divConfigurarForma").className = "ocultar";
-    document.getElementById("divConfigurarSonido").className = "ocultar";
-    document.getElementById("divConfigurarColor").className = "ocultar";
 }
 
 function mostrarcitas() {
 
     ocultar();
     document.getElementById("citas").className = "Pantalla2 animated fadeIn";
-
-    document.getElementById("divconfigurarAlarma").className = "ocultar";
-    document.getElementById("divConfigurarDia").className = "ocultar";
-    document.getElementById("divConfigurarHora").className = "ocultar";
-    document.getElementById("divConfigurarForma").className = "ocultar";
-    document.getElementById("divConfigurarSonido").className = "ocultar";
-    document.getElementById("divConfigurarColor").className = "ocultar";
 }
 
 function volvercitas() {
 
     pantallaAnadirCita.className += " ocultar";
     document.getElementById("citas").className = "Pantalla2 animated fadeIn";
-    
-    document.getElementById("divconfigurarAlarma").className = "ocultar";
-    document.getElementById("divConfigurarDia").className = "ocultar";
-    document.getElementById("divConfigurarHora").className = "ocultar";
-    document.getElementById("divConfigurarForma").className = "ocultar";
-    document.getElementById("divConfigurarSonido").className = "ocultar";
-    document.getElementById("divConfigurarColor").className = "ocultar";
 }
 
 function mostrarAnadirMedicina() {
 
     ocultar();
     document.getElementById("pantallaAnadirMedicina").className = "Pantalla2 animated fadeIn";
-
-    document.getElementById("divconfigurarAlarma").className = "ocultar";
-    document.getElementById("divConfigurarDia").className = "ocultar";
-    document.getElementById("divConfigurarHora").className = "ocultar";
-    document.getElementById("divConfigurarForma").className = "ocultar";
-    document.getElementById("divConfigurarSonido").className = "ocultar";
-    document.getElementById("divConfigurarColor").className = "ocultar";
 }
 
 function mostraranadircitas() {
 
     ocultar();
     document.getElementById("pantallaAnadirCita").className = "Pantalla2 animated fadeIn";
-
-    document.getElementById("divconfigurarAlarma").className = "ocultar";
-    document.getElementById("divConfigurarDia").className = "ocultar";
-    document.getElementById("divConfigurarHora").className = "ocultar";
-    document.getElementById("divConfigurarForma").className = "ocultar";
-    document.getElementById("divConfigurarSonido").className = "ocultar";
-    document.getElementById("divConfigurarColor").className = "ocultar";
 }
 
 function configurarDias() {
@@ -376,6 +346,11 @@ function mostrarCalendarioTres(){
 
 function configurarAlarma(){
     document.getElementById("divconfigurarAlarma").className = "zindex";
+    document.getElementById("divPostergarAlarma").className ="ocultar";
+}
+
+function postergarAlarma(){
+    document.getElementById("divPostergarAlarma").className ="zindex";
 }
 
 function guardarMedicamento() {

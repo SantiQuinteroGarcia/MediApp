@@ -419,10 +419,19 @@ label{
 #divconfigurarAlarma{
     background-color: rgb(242,242,242, 0.95);
     position: absolute;
-    top: 333px;
-    left: 85px;
+    top: 270px;
+    left: 5px;
     border-radius: 15px;
     width: 210px;
+}
+
+#divPostergarAlarma{
+    background-color: rgb(242,242,242, 0.95);
+    position: absolute;
+    top: 410px;
+    left: 60px;
+    border-radius: 15px;
+    width: 280px;
 }
 
 .inputCantidad{
