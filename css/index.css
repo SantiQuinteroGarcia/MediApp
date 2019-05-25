@@ -97,57 +97,6 @@
     position: relative;
 }
 
-/*
-.cabecera {
-    border: 1px solid black;
-    width: 331px;
-    height: 85px;
-    position: absolute;
-    top: 19px;
-    left: 10px;
-    border-radius: 29px;
-    background-color: blue;
-    text-align: center;
-}
-
-.contenedor {    
-        border: 1px solid black;
-    width: 345px;
-    height: 168px;
-    position: absolute;
-    top: 40px;
-    left: 5px;
-}
-
-.contenedor2{
-        
-    border: 1px solid black;
-    width: 345px;
-    height: 108px;
-    position: absolute;
-    top: 294px;
-    left: 5px;
-}
-*/
-
-.contenedorinterno {
-    border-radius: 21px;
-    border: 2px solid black;
-    width: 310px;
-    height: 18px;
-    position: relative;
-    top: -9px;
-    left: 19px;
-    background: white;
-}
-.contenedor5 {    
-    width: 444px;
-    height: 35px;
-    position: absolute;
-    top: 407px;
-    left: 61px;
-}
-
 .number{
     width: 40px;
     height: 40px;
@@ -170,14 +119,6 @@
     border-radius:20px;
 }
 
-.contenedor3{   
-    border: 1px solid black;
-    width: 77px;
-    height: 40px;
-    position: absolute;
-    top: 66px;
-    left: 266px;
-}
 
 .tituloPantalla{
     top: 0px;
@@ -187,7 +128,7 @@
     margin-bottom: 30px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: rgb(242,242,242, 0.3);
+    background-color: rgb(242,242,242, 0.5);
 }
 
 h1{
@@ -237,7 +178,7 @@ label{
     width: 300px;
 }
 
-.anadirMedicamentos{
+.anadir{
     border-radius: 15px;
     width: 134px;
     height: 71px;
@@ -471,4 +412,12 @@ label{
 
 .zindex{
     z-index: 2;
+}
+
+.citasAgregadas{
+    border-radius: 8px;
+    background-color: #0071BC;
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 10px;
 }

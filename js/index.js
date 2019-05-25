@@ -64,7 +64,7 @@ var app = {
         document.getElementById("btnGuardar").addEventListener("click", guardarMedicamento);
         document.getElementById("btnguardarCitas").addEventListener("click", guardarCitas);
         document.getElementById("btnVolverAInicio").addEventListener("click", mostrarInicio);
-        document.getElementById("btnañadircita2").addEventListener("click", pintarCitas);
+       //document.getElementById("btnañadircita2").addEventListener("click", pintarCitas);
 
         document.getElementById("btnañadircita").addEventListener("click", mostraranadircitas);
         document.getElementById("btnvolver").addEventListener("click", volvercitas);
@@ -453,6 +453,8 @@ function guardarCitas() {
             document.getElementById("clinicatxt").value = "";
             document.getElementById("fechatxt").value = "";
             document.getElementById("horatxt").value = "";
+            
+            pintarCitas();
         }
 
     }
