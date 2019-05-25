@@ -203,10 +203,13 @@ h2, h3, h4{
     letter-spacing: 1px;
 }
 
+p{
+    font-size: 14px;
+}
+
 .colorTipoLetra{
     color: white;
     font-family: sans-serif;
-    
 }
 
 .fuenteTitulos{
@@ -411,6 +414,15 @@ label{
 .divSonidoElegido{
     background-color: #0071BC;
     border-radius: 8px;
+}
+
+#divconfigurarAlarma{
+    background-color: rgb(242,242,242, 0.95);
+    position: absolute;
+    top: 333px;
+    left: 85px;
+    border-radius: 15px;
+    width: 210px;
 }
 
 .inputCantidad{
