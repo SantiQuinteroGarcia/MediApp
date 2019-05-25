@@ -26,6 +26,7 @@ let medimed;
 
 var audio, play, stop;
 var contadorCalendario = 0;
+var inicioOmedicamentos = 1;
 
 window.onload = inicio;
 function inicio() {
@@ -90,7 +91,7 @@ var app = {
 
         document.getElementById("porTomar1").addEventListener("click", configurarAlarma);        
         document.getElementById("porTomar3").addEventListener("click", configurarAlarma);        
-        document.getElementById("btnCerrarConfigurarAlarma").addEventListener("click", mostrarInicio);        
+        document.getElementById("btnCerrarConfigurarAlarma").addEventListener("click", mostrarInicioOmostrarMedicamentos);        
         document.getElementById("btnPostergarAlarma").addEventListener("click", postergarAlarma);        
         document.getElementById("btnCerrarPostergar").addEventListener("click", configurarAlarma);      
         document.getElementById("btnReprogramarAlarma").addEventListener("click", reprogramarAlarma);        
@@ -160,12 +161,23 @@ function mostrarInicio() {
 
     ocultar();
     document.getElementById("inicio").className = "Pantalla1 animated fadeIn";
+    inicioOmedicamentos = 1;
 }
 
 function mostrarMedicamentos() {
 
     ocultar();
     document.getElementById("pantallaMedicamentos").className = "Pantalla2 animated fadeIn";
+    inicioOmedicamentos = 2;
+}
+
+function mostrarInicioOmostrarMedicamentos(){
+    if (inicioOmedicamentos == 1){
+        mostrarInicio();
+    }
+    if (inicioOmedicamentos == 2){
+        mostrarMedicamentos();
+    }
 }
 
 function mostrarcitas() {
