@@ -92,7 +92,10 @@ var app = {
         document.getElementById("porTomar3").addEventListener("click", configurarAlarma);        
         document.getElementById("btnCerrarConfigurarAlarma").addEventListener("click", mostrarInicio);        
         document.getElementById("btnPostergarAlarma").addEventListener("click", postergarAlarma);        
-        document.getElementById("btnCerrarPostergar").addEventListener("click", configurarAlarma);        
+        document.getElementById("btnCerrarPostergar").addEventListener("click", configurarAlarma);      
+        document.getElementById("btnReprogramarAlarma").addEventListener("click", reprogramarAlarma);        
+        document.getElementById("btnCerrarReprogramar").addEventListener("click", configurarAlarma);      
+        document.getElementById("cancelarReprogramarHora").addEventListener("click", configurarAlarma);      
     },
 
     // deviceready Event Handler
@@ -150,6 +153,7 @@ function ocultar() {
     document.getElementById("divConfigurarSonido").className = "ocultar";
     document.getElementById("divConfigurarColor").className = "ocultar";
     document.getElementById("divPostergarAlarma").className ="ocultar";
+    document.getElementById("divReprogramarAlarma").className = "ocultar";
 }
 
 function mostrarInicio() {
@@ -347,10 +351,15 @@ function mostrarCalendarioTres(){
 function configurarAlarma(){
     document.getElementById("divconfigurarAlarma").className = "zindex";
     document.getElementById("divPostergarAlarma").className ="ocultar";
+    document.getElementById("divReprogramarAlarma").className = "ocultar";
 }
 
 function postergarAlarma(){
     document.getElementById("divPostergarAlarma").className ="zindex";
+}
+
+function reprogramarAlarma(){
+    document.getElementById("divReprogramarAlarma").className = "zindex";
 }
 
 function guardarMedicamento() {

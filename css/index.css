@@ -361,6 +361,15 @@ label{
     border-radius: 8px;
 }
 
+.inputText2{
+    border: 0px;
+    display: inline-block;
+    background-color: rgb(41,171,226, 0.6);
+    width: 300px;
+    border-radius: 8px;
+    width: 150px;
+}
+
 .tamanoInput{
 
     width: 100px;
@@ -420,7 +429,7 @@ label{
     background-color: rgb(242,242,242, 0.95);
     position: absolute;
     top: 270px;
-    left: 5px;
+    left: 15px;
     border-radius: 15px;
     width: 210px;
 }
@@ -428,10 +437,19 @@ label{
 #divPostergarAlarma{
     background-color: rgb(242,242,242, 0.95);
     position: absolute;
-    top: 410px;
+    top: 395px;
     left: 60px;
     border-radius: 15px;
     width: 280px;
+}
+
+#divReprogramarAlarma{
+    background-color: rgb(242,242,242, 0.95);
+    position: absolute;
+    top: 395px;
+    left: 60px;
+    border-radius: 15px;
+    width: 200px;
 }
 
 .inputCantidad{
