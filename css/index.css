@@ -164,6 +164,15 @@ label{
     text-align: center;
 }
 
+.anadir2{
+    border-radius: 15px;
+    width: 134px;
+    height: 71px;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
 .divDiario{
     margin: 0 auto;
     margin-top: 70px;
@@ -459,3 +468,4 @@ label{
     margin: 0 auto;
     margin-bottom: 10px;
 }
+
