@@ -47,6 +47,7 @@
     margin: 0;
     outline:none;
 }
+
 .Pantalla2{
     background:url('../img/fondo.png') no-repeat center center;
     background-color: rgb(41, 171, 226);
@@ -63,13 +64,12 @@
 .botonesprincipales{
     top: 0px;
     left: 0px;
-    width: 20%;
-    height: 65px;
     align-content: center;
     font-family: serif;
     font-size: 100%;
     outline: none;
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-right: 3px;
 }
 
 .number{
@@ -92,6 +92,17 @@
     width: 300px;
     margin: 0px auto;
     margin-bottom: 30px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgb(242,242,242, 0.5);
+}
+
+.tituloPantalla2{
+    top: 0px;
+    height: 70px;
+    width: 300px;
+    margin: 0px auto;
+    margin-bottom: 20px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: rgb(242,242,242, 0.5);
@@ -153,15 +164,39 @@ label{
     text-align: center;
 }
 
+.divDiario{
+    margin: 0 auto;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.divDiario2{
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
 .menu{
     position: absolute;
     top: 520px;
-    left: 25px;
+    left: 40px;
     border-radius: 15px;
-    width: 310px;
+    width: 280px;
     height: 75px;
     text-align: center;
     background-color: rgb(46,49,146, 1);
+}
+
+#volverDiario{
+    position: absolute;
+    top: 530px;
+    left: 137px;
+}
+
+.botonesNota{
+    position: absolute;
+    top: 530px;
+    left: 90px;
 }
 
 .divMostrar{
@@ -170,6 +205,15 @@ label{
     margin: 0 auto;
     border-radius: 15px;
     background-color: rgb(242,242,242, 0.3);
+}
+
+.divMostrar2{
+    width: 300px;
+    border-radius: 15px;
+    background-color: rgb(242,242,242, 0.3);
+    margin: 0 auto;
+    margin-top: 70px;
+    text-align: center;
 }
 
 .centrarVerticalmente{
@@ -241,7 +285,7 @@ label{
     /*border: 1px blue;*/
     width: 315px;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 15px;
     background-color: rgb(255,255,255, 0.3);
 }
@@ -285,6 +329,24 @@ label{
     width: 300px;
     border-radius: 8px;
     width: 150px;
+}
+
+.inputText3{
+    border: 0px;
+    display: inline-block;
+    background-color: rgb(255,255,255, 0.5);
+    width: 300px;
+    border-radius: 8px;
+    height: 30px;
+}
+
+.inputText4{
+    border: 0px;
+    display: inline-block;
+    background-color: rgb(255,255,255, 0.5);
+    width: 280px;
+    border-radius: 8px;
+    height: 60px;
 }
 
 .tamanoInput{

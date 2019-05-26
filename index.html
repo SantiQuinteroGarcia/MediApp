@@ -153,15 +153,15 @@
             <input id="btnAnadirMedicinaDesdeInicio" type="image" src="img/anadirMedicinainicio.png">
         </div>
 
-        <div id="cabecera" class="menu">
+        <div class="menu">
             <input value="Inicio" class="botonesprincipales   animated flipInX " id="input1" type="image"
-                src="img/inicio.png" name="">
+                src="img/inicio.png" >
             <input value="Medicam." class="botonesprincipales   animated flipInX " id="btnMedicamentos" type="image"
-                src="img/medicamentosinicio.png" name="">
+                src="img/medicamentosinicio.png">
             <input value="Cit medicam." class="botonesprincipales   animated flipInX " id="btncitas" type="image"
-                src="img/citas medicasinicio.png" name="">
-            <input value="Mas" class="botonesprincipales    animated flipInX " id="input1" type="image"
-                src="img/masinicio.png" name="">
+                src="img/citas medicasinicio.png">
+            <input value="Mas" class="botonesprincipales    animated flipInX " id="btnInicioAMas" type="image"
+                src="img/masinicio.png">
         </div>
 
     </section>
@@ -181,10 +181,7 @@
             <div class="citasAgregadas margenAbajo">
                 <label type="text" id="nombrecitas"></label><br>
             </div>
-            <div class="citasAgregadas">
-                <label type="text" id="nombrecitas2"></label><br>
-            </div>
-
+            
             <br>
         </div>
 
@@ -194,14 +191,14 @@
                 src="img/citainicio.png">
         </div>
 
-        <div id="cabecera" class="menu">
+        <div class="menu">
             <input value="Inicio" class="botonesprincipales   animated flipInX " id="btninicio" type="image"
                 src="img/inicioinicio.png" name="">
             <input value="Medicam." class="botonesprincipales   animated flipInX " id="btnCitasAMedicamentos"
                 type="image" src="img/medicamentosinicio.png" name="">
             <input value="Cit medicam." class="botonesprincipales   animated flipInX " id="btncitas" type="image"
                 src="img/citas medicas hoverinicio.png" name="">
-            <input value="Mas" class="botonesprincipales    animated flipInX " id="input1" type="image"
+            <input value="Mas" class="botonesprincipales    animated flipInX " id="btnCitasAMas" type="image"
                 src="img/masinicio.png" name="">
         </div>
 
@@ -252,10 +249,10 @@
 
     <section id="pantallaAnadirCita" class="Pantalla2 animated fadeIn ocultar">
 
-        <div class="tituloPantalla">
+        <div class="tituloPantalla2">
             <br>
             <br>
-            <h1 class="fuenteTitulos alinearCentro">Añadir Cita</h1>
+            <h1 class="fuenteTitulos alinearCentro" id="tituloCita">Añadir Cita</h1>
         </div>
 
         <div class="divConfig2">
@@ -285,10 +282,11 @@
             </div>
         </div>
 
-        
-        <br>
+        <div class="divConfig2 margenAbajo">
+            <h4 class="fuenteTitulos alinearIzquierda marginSiete paddingArribaAbajo">Notas</h4>
+            <input id="notatxt" type="text" class="inputText3 marginSiete margenAbajo">
         </div>
-        <br>
+
         <div class="alinearCentro">
             <input class="margenDerecha animated flipInX " id="btnvolver" type="image" name=""
                 src="img/volver principalinicio.png">
@@ -302,7 +300,7 @@
         <div class="tituloPantalla">
             <br>
             <br>
-            <h1 class="fuenteTitulos alinearCentro">Añadir Medicina</h1>
+            <h1 class="fuenteTitulos alinearCentro" id="tituloMedicina">Añadir Medicina</h1>
         </div>
 
         <div class="divConfig">
@@ -359,11 +357,77 @@
         </div>
     </section>
 
+    <section id="pantallaMas" class="ocultar">
 
+        <div class="tituloPantalla2">
+            <br>
+            <br>
+            <h1 class="fuenteTitulos alinearCentro" id="tituloCita">Más opciones</h1>
+        </div>
 
+        <div class="divDiario">
+            <img src="img/mi diarioinicio.png" id="btnMiDiario">
+        </div>        
 
+        <div class="menu">
+            <input value="Inicio" class="botonesprincipales   animated flipInX " id="btnMasAInicio"
+                type="image" src="img/inicioinicio.png">
+            <input value="Medicam." class="botonesprincipales   animated flipInX " id="btnMasAMedicamentos"
+                type="image" src="img/medicamentosinicio.png">
+            <input value="Cit medicam." class="botonesprincipales   animated flipInX " id="btnMasACitas"
+                type="image" src="img/citas medicasinicio.png">
+            <input value="Mas" class="botonesprincipales    animated flipInX " id="btnMasAMas" type="image"
+                src="img/mas hoverinicio (1).png">
+        </div>
 
+    </section>
 
+    <section id="divMidiario" class="ocultar">
+
+        <div class="tituloPantalla2">
+            <br>
+            <br>
+            <h1 class="fuenteTitulos alinearCentro" id="tituloCita">Mi diario</h1>
+        </div>
+
+        <div class="divDiario">
+            <img src="img/nota1inicio.png" id="btnNota1">
+        </div> 
+
+        <div class="divDiario2">
+            <img src="img/nota2inicio.png" id="btnNota1">
+        </div> 
+
+        <div class="anadir">
+            <img src="img/añadir notainicio.png">
+        </div>
+
+        
+        <img src="img/volver principalinicio.png" id="volverDiario">
+
+    </section>
+
+    <section id="divNota" class="ocultar">
+
+        <div class="tituloPantalla2">
+            <br>
+            <br>
+            <h1 class="fuenteTitulos alinearCentro" id="tituloCita">Nota</h1>
+        </div>
+
+        <div class="divMostrar2">
+                <h2 class="fuenteTitulos marginSiete alinearIzquierda margenAbajo paddingArribaAbajo">Nota 1</h2>
+                <input id="notaDiario1" type="text" class="inputText4 marginSiete margenAbajo">
+        </div>
+
+        <div class="alinearCentro botonesNota">
+            <input class="margenDerecha animated flipInX " id="btnvolverNota" type="image"
+                src="img/volver principalinicio.png">
+            <input class="margenDerecha animated flipInX " id="btnguardarNota" type="image"
+                src="img/hecho principalinicio.png">
+        </div>
+
+    </section>
 
     <!------------------------------------------------Z-index's-------------------------------------------------------------------------->
 
@@ -515,7 +579,6 @@
             <img src="img/aceptar horainicio.png" id="caceptarReprogramarHora">
         </div>
       
-
     </div>
 
     <script type="text/javascript" src="js/index.js"></script>

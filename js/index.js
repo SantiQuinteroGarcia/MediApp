@@ -96,7 +96,20 @@ var app = {
         document.getElementById("btnCerrarPostergar").addEventListener("click", configurarAlarma);      
         document.getElementById("btnReprogramarAlarma").addEventListener("click", reprogramarAlarma);        
         document.getElementById("btnCerrarReprogramar").addEventListener("click", configurarAlarma);      
-        document.getElementById("cancelarReprogramarHora").addEventListener("click", configurarAlarma);      
+        document.getElementById("cancelarReprogramarHora").addEventListener("click", configurarAlarma);   
+        document.getElementById("btnEditarAlarma").addEventListener("click", mostrarEditarMedicina);   
+        
+        document.getElementById("btnInicioAMas").addEventListener("click", mostrarMas);
+        document.getElementById("btnCitasAMas").addEventListener("click", mostrarMas);
+        document.getElementById("btnMedicamentosAMas").addEventListener("click", mostrarMas);
+        document.getElementById("btnMasAInicio").addEventListener("click", mostrarInicio);
+        document.getElementById("btnMasAMedicamentos").addEventListener("click", mostrarMedicamentos);
+        document.getElementById("btnMasACitas").addEventListener("click", mostrarcitas);
+
+        document.getElementById("btnMiDiario").addEventListener("click", mostrarMiDiario);
+        document.getElementById("btnNota1").addEventListener("click", mostrarNota);
+        document.getElementById("volverDiario").addEventListener("click", mostrarMas);
+        document.getElementById("btnvolverNota").addEventListener("click", mostrarMiDiario);
     },
 
     // deviceready Event Handler
@@ -144,8 +157,9 @@ function ocultar() {
     document.getElementById("pantallaMedicamentos").className = "ocultar";
     document.getElementById("citas").className = "ocultar";
     document.getElementById("pantallaAnadirMedicina").className = "ocultar";
-
-    
+    document.getElementById("pantallaMas").className = "ocultar";
+    document.getElementById("divMidiario").className = "ocultar";
+    document.getElementById("divNota").className = "ocultar";
 
     document.getElementById("divconfigurarAlarma").className = "ocultar";
     document.getElementById("divConfigurarDia").className = "ocultar";
@@ -196,12 +210,37 @@ function mostrarAnadirMedicina() {
 
     ocultar();
     document.getElementById("pantallaAnadirMedicina").className = "Pantalla2 animated fadeIn";
+    document.getElementById("tituloMedicina").innerHTML = "Añadir medicina";
+}
+
+function mostrarEditarMedicina(){
+    ocultar();
+    document.getElementById("pantallaAnadirMedicina").className = "Pantalla2 animated fadeIn";
+    document.getElementById("tituloMedicina").innerHTML = "Editar medicina";
 }
 
 function mostraranadircitas() {
 
     ocultar();
     document.getElementById("pantallaAnadirCita").className = "Pantalla2 animated fadeIn";
+}
+
+function mostrarMas(){
+
+    ocultar();
+    document.getElementById("pantallaMas").className = "Pantalla2 animated fadeIn";
+}
+
+function mostrarMiDiario(){
+
+    ocultar();
+    document.getElementById("divMidiario").className = "Pantalla2 animated fadeIn";
+}
+
+function mostrarNota(){
+
+    ocultar();
+    document.getElementById("divNota").className = "Pantalla2 animated fadeIn";
 }
 
 function configurarDias() {
