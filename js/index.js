@@ -256,7 +256,7 @@ function configurarDias() {
 
 function configurarHora() {
 
-    document.getElementById("btnCantidadInicio").src = "img/desplegar hoverinicio.png";
+    document.getElementById("btnCantidadInicio").src = "img/cantidad hover.png";
     document.getElementById("divConfigurarHora").className = "zindex";
 }
 
