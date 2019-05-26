@@ -62,8 +62,11 @@ var app = {
         document.getElementById("btnVolverAAnadirMedicina").addEventListener("click", seguirConfigurandoMedicina);
         document.getElementById("btnVolverDeSonidoAAnadirMedicina").addEventListener("click", seguirConfigurandoMedicina);
         document.getElementById("btnGuardar").addEventListener("click", guardarMedicamento);
+        document.getElementById("btnGuardar").addEventListener("click", pintarMedicamentos);
         document.getElementById("btnguardarCitas").addEventListener("click", guardarCitas);
         document.getElementById("btnVolverAInicio").addEventListener("click", mostrarInicio);
+        
+
        //document.getElementById("btnañadircita2").addEventListener("click", pintarCitas);
 
         document.getElementById("btnañadircita").addEventListener("click", mostraranadircitas);
@@ -422,7 +425,7 @@ function guardarMedicamento() {
 
 
 
-    if (medicamento.length > 0 && cantidad.length > 0 && fecha2.length > 0) {
+    if (medicamento.length > 0  > 0 && fecha2.length > 0) {
         var medicamentosmedicos = new Object();
 
         medicamentosmedicos.medicamento = medicamento;
@@ -515,7 +518,38 @@ function pintarCitas() {
 
     /*Mostrar datos almacenados*/
     for (i = 0; i < listacitas.length; i++) {
-        document.getElementById("nombrecitas").innerHTML = listacitas[i].citas;
+        document.getElementById("nombrecitas1").innerHTML = listacitas[0].citas;
+        document.getElementById("nombrecitas2").innerHTML = listacitas[0].fecha;
+        //document.getElementById("nombrecitas2").innerHTML = listacitas[1].citas;
+        document.getElementById("nombrecitas3").innerHTML = listacitas[2].citas;
+        document.getElementById("nombrecitas4").innerHTML = listacitas[3].citas;
+        document.getElementById("nombrecitas5").innerHTML = listacitas[4].citas;
+        document.getElementById("nombrecitas6").innerHTML = listacitas[5].citas;
+    }
+
+}
+
+
+function pintarMedicamentos() {
+
+
+    //se recorre el arreglo de rutinas  
+    var i = 0
+
+    var nombremedecamentos = localStorage.getItem("medicamentosmedicos");
+    var listacitas = JSON.parse(nombremedecamentos);
+    console.log(listacitas);
+
+
+    /*Mostrar datos almacenados*/
+    for (i = 0; i < listacitas.length; i++) {
+        document.getElementById("nombrecitas1").innerHTML = listacitas[0].medicamento;
+        document.getElementById("nombrecitas2").innerHTML = listacitas[1].medicamento;
+        //document.getElementById("nombrecitas2").innerHTML = listacitas[1].citas;
+        document.getElementById("nombrecitas3").innerHTML = listacitas[2].medicamento;
+        document.getElementById("nombrecitas4").innerHTML = listacitas[3].medicamento;
+        document.getElementById("nombrecitas5").innerHTML = listacitas[4].medicamento;
+        document.getElementById("nombrecitas6").innerHTML = listacitas[5].medicamento;
     }
 
 }
