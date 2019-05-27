@@ -22,6 +22,7 @@ var cit = new Object();
 let citasmed;
 var med = new Object();
 let medimed;
+var objetoNota = new Object();
 
 
 var audio, play, stop;
@@ -111,9 +112,11 @@ var app = {
         document.getElementById("btnMasACitas").addEventListener("click", mostrarcitas);
 
         document.getElementById("btnMiDiario").addEventListener("click", mostrarMiDiario);
-        document.getElementById("btnNota1").addEventListener("click", mostrarNota);
+        document.getElementById("btnanadirNota").addEventListener("click", mostrarNota);
         document.getElementById("volverDiario").addEventListener("click", mostrarMas);
         document.getElementById("btnvolverNota").addEventListener("click", mostrarMiDiario);
+
+        document.getElementById("btnguardarNota").addEventListener("click", guardarNota);
     },
 
     // deviceready Event Handler
@@ -449,9 +452,10 @@ function guardarMedicamento() {
             localStorage.setItem("medicamentosmedicos", JSON.stringify(medimed));
 
             document.getElementById("nombremedtxt").value = "";
-            document.getElementById("medicotxt").value = "";
-            document.getElementById("fechatxt").value = "";
-            document.getElementById("horatxt").value = "";
+            document.getElementById("cantidadtxt").value = "";
+            document.getElementById("unidadestxt").value = "";
+            document.getElementById("horamedtxt").value = "";
+            document.getElementById("diatxt").value = "";
         }
     }
     else {
@@ -494,6 +498,7 @@ function guardarCitas() {
             document.getElementById("clinicatxt").value = "";
             document.getElementById("fechatxt").value = "";
             document.getElementById("horatxt").value = "";
+            document.getElementById("notatxt").value = "";
             
             pintarCitas();
         }
@@ -575,6 +580,24 @@ function pintarMedicamentospt() {
             document.getElementById("mostrarmed1pm").children[i].className = "paddingAbajo";
         }
     }
+}
+
+function guardarNota(){
+
+    let nota = localStorage.getItem("itemNota") != null ? JSON.parse(localStorage.getItem("itemNota")) : [];
+    
+    objetoNota.nombre = document.getElementById("nombreNota").value;
+    objetoNota.descripcion = document.getElementById("descripcionNota").value;
+
+    nota.push(objetoNota);
+    localStorage.setItem("itemNota", JSON.stringify(nota));
+
+    document.getElementById("nombreNota").value = "";
+    document.getElementById("descripcionNota").value = "";
+}
+
+function editarNota(){
+    
 }
 
 app.initialize();

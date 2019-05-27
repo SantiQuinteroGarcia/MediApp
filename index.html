@@ -411,16 +411,16 @@
             <h1 class="fuenteTitulos alinearCentro" id="tituloCita">Mi diario</h1>
         </div>
 
-        <div class="divDiario">
-            <img src="img/nota1inicio.png" id="btnNota1">
+        <div class="divDiario" id="btnNota1">
+            <img src="img/nota1inicio.png" id="btnNota11">
         </div> 
 
-        <div class="divDiario2">
-            <img src="img/nota2inicio.png" id="btnNota1">
+        <div class="divDiario2" id="btnNota2">
+            <img src="img/nota2inicio.png" id="btnNota22">
         </div> 
 
         <div class="anadir">
-            <img src="img/añadir notainicio.png">
+            <img src="img/añadir notainicio.png" id="btnanadirNota">
         </div>
 
         
@@ -437,8 +437,9 @@
         </div>
 
         <div class="divMostrar2">
-                <h2 class="fuenteTitulos marginSiete alinearIzquierda margenAbajo paddingArribaAbajo">Nota 1</h2>
-                <textarea rows="5" id="notaDiario1" type="text" class="inputText4 marginSiete margenAbajo"></textarea>
+            <label>Nombre: </label>  
+            <input type="text" id="nombreNota">
+                <textarea rows="5" id="descripcionNota" type="text" class="inputText4 marginSiete margenAbajo"></textarea>
         </div>
 
         <div class="alinearCentro botonesNota">
@@ -479,7 +480,7 @@
         <h5 class="color2TipoLetra margenArriba margenAbajo alinearCentro">Escribe aquí la dosis pre-escrita</h5>
         <div class="alinearCentro">
             <input type="text" placeholder="cantidad" class="inputCantidad" id="cantidadtxt">
-            <input type="text" placeholder="unidad(ej. mg)" class="inputCantidad">
+            <input type="text" placeholder="unidad(ej. mg)" class="inputCantidad" id="unidadestxt">
         </div>
         <div class="alinearCentro fondoAzul margenGeneral">
             <img src="img/volverinicio.png" alt="Volver" class="margenDerecha margenArriba"
@@ -603,6 +604,7 @@
     </div>
 
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
 </body>
 
 </html>
