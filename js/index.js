@@ -93,7 +93,7 @@ var app = {
         document.getElementById("flechaIzquierdaCalendarioTres").addEventListener("click", mostrarCalendarioDos);
 
         document.getElementById("porTomar1").addEventListener("click", configurarAlarma);        
-        document.getElementById("porTomar3").addEventListener("click", configurarAlarma);        
+        document.getElementById("porTomar4").addEventListener("click", configurarAlarma);        
         document.getElementById("btnCerrarConfigurarAlarma").addEventListener("click", mostrarInicioOmostrarMedicamentos);        
         document.getElementById("btnPostergarAlarma").addEventListener("click", postergarAlarma);        
         document.getElementById("btnCerrarPostergar").addEventListener("click", configurarAlarma);      
