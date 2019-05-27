@@ -93,17 +93,8 @@ var app = {
         document.getElementById("flechaIzquierdaCalendarioUno").addEventListener("click", mostrarCalendarioTres);
         document.getElementById("flechaIzquierdaCalendarioTres").addEventListener("click", mostrarCalendarioDos);
 
-
-
-        document.getElementById("flechaDerechamed1").addEventListener("click", mostrarmedicamentos2);
-        document.getElementById("flechaIzquierdamed2").addEventListener("click", mostrarmedicamentos1);
-
-        document.getElementById("flechaDerechamed2pm").addEventListener("click", mostrarmedicamentos2pm);
-        document.getElementById("flechaIzquierdamed2pma").addEventListener("click", mostrarmedicamentos1pm);
-
-
-        document.getElementById("porTomar1").addEventListener("click", configurarAlarma);        
-        document.getElementById("porTomar4").addEventListener("click", configurarAlarma);        
+        document.getElementById("nombremedpt1").addEventListener("click", configurarAlarma);        
+        document.getElementById("nombremed1").addEventListener("click", configurarAlarma);        
         document.getElementById("btnCerrarConfigurarAlarma").addEventListener("click", mostrarInicioOmostrarMedicamentos);        
         document.getElementById("btnPostergarAlarma").addEventListener("click", postergarAlarma);        
         document.getElementById("btnCerrarPostergar").addEventListener("click", configurarAlarma);      
@@ -461,8 +452,6 @@ function guardarMedicamento() {
             document.getElementById("medicotxt").value = "";
             document.getElementById("fechatxt").value = "";
             document.getElementById("horatxt").value = "";
-
-
         }
     }
     else {
@@ -547,21 +536,18 @@ function pintarMedicamentos() {
     var listacitas = JSON.parse(nombremedecamentos);
     console.log(listacitas);
 
-
+    var arrayMed = ["nombremed1", "nombremed2", "nombremed3"];
+    var arrayHora = ["hora1", "hora2", "hora3"];
     /*Mostrar datos almacenados*/
     for (i = 0; i < listacitas.length; i++) {
-
-        document.getElementById("img1").className = "centrarVerticalmente";
-        document.getElementById("img11").className = "centrarVerticalmente";
-
-        document.getElementById("nombremed1").innerHTML = listacitas[0].medicamento;
-        document.getElementById("nombremed2").innerHTML = listacitas[1].medicamento;
-        document.getElementById("nombremed3").innerHTML = listacitas[2].medicamento;
-        document.getElementById("nombremed4").innerHTML = listacitas[3].medicamento;
-        document.getElementById("nombremed5").innerHTML = listacitas[4].medicamento;
-        document.getElementById("nombremed6").innerHTML = listacitas[5].medicamento;
-      
-        ;
+        
+        if(listacitas[i].medicamento){
+        
+            document.getElementById(arrayMed[i]).innerHTML = listacitas[i].medicamento;
+            document.getElementById(arrayHora[i]).innerHTML = listacitas[i].hora2;
+            document.getElementById("mostrarmed1").children[i].children[0].className = "centrarVerticalmente";
+            document.getElementById("mostrarmed1").children[i].children[2].className = "centrarVerticalmente";
+        }
     }
 }
 
@@ -575,74 +561,21 @@ function pintarMedicamentospt() {
     var listacitas = JSON.parse(nombremedecamentos);
     console.log(listacitas);
 
+    var arrayMed = ["nombremedpt1", "nombremedpt2", "nombremedpt3"];
+    var arrayHora = ["horapt1", "horapt2", "hora3pt"];
+
 
     /*Mostrar datos almacenados*/
     for (i = 0; i < listacitas.length; i++) {
-        document.getElementById("nombremedpt1").innerHTML = listacitas[0].medicamento;
-        document.getElementById("nombremedpt2").innerHTML = listacitas[1].medicamento;
-        //document.getElementById("nombrecitas2").innerHTML = listacitas[1].citas;
-        document.getElementById("nombremedpt3").innerHTML = listacitas[2].medicamento;
-         document.getElementById("nombremedpt4").innerHTML = listacitas[3].medicamento;
-        document.getElementById("nombremedpt5").innerHTML = listacitas[4].medicamento;
-        //document.getElementById("nombrecitas2").innerHTML = listacitas[1].citas;
-        document.getElementById("nombremedpt6").innerHTML = listacitas[5].medicamento;
-      
-      document.getElementById("nombremedpt7").innerHTML = listacitas[6].medicamento;
-      document.getElementById("nombremedpt8").innerHTML = listacitas[7].medicamento;
+        
+        if(listacitas[i].medicamento){
+        
+            document.getElementById(arrayMed[i]).innerHTML = listacitas[i].medicamento;
+            document.getElementById(arrayHora[i]).innerHTML = listacitas[i].hora2;
+            document.getElementById("mostrarmed1pm").children[i].children[0].className = "centrarVerticalmente";
+            document.getElementById("mostrarmed1pm").children[i].children[2].className = "centrarVerticalmente";
+        }
     }
-
-
-
-
-
-
 }
-
-
-function mostrarmedicamentos2(){
-
-    document.getElementById("mostrarmed1").className = "ocultar";
-    document.getElementById("mostrarmed2").className = "paddingAbajo";
-    
-
-   
-}
-
-function mostrarmedicamentos1(){
-
-    document.getElementById("mostrarmed2").className = "ocultar";
-    document.getElementById("mostrarmed1").className = "paddingAbajo";
-    
-
-   
-}
-
-function mostrarmedicamentos2pm(){
-
-    document.getElementById("mostrarmed1pm").className = "ocultar";
-    document.getElementById("mostrarmed2pm").className = "paddingAbajo";
-    
-
-   
-}
-
-function mostrarmedicamentos1pm(){
-
-    document.getElementById("mostrarmed2pm").className = "ocultar";
-    document.getElementById("mostrarmed1pm").className = "paddingAbajo";
-    
-
-   
-}
-
-
-
-
-
-
-
-
-
-
 
 app.initialize();

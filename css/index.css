@@ -194,7 +194,7 @@ label{
     width: 280px;
     height: 75px;
     text-align: center;
-    background-color: rgb(46,49,146, 1);
+    background-color: rgb(46,49,146, 0.6);
 }
 
 #volverDiario{
