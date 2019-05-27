@@ -529,13 +529,11 @@ function pintarCitas() {
     /*Mostrar datos almacenados*/
   
         document.getElementById("nombrecitas1").innerHTML = listacitas[0].citas;
-        document.getElementById("nombrecitas2").innerHTML = listacitas[0].citas;
+        document.getElementById("nombrecitas2").innerHTML = listacitas[1].citas;
         document.getElementById("nombrecitas3").innerHTML = listacitas[2].citas;
         document.getElementById("nombrecitas4").innerHTML = listacitas[3].citas;
         document.getElementById("nombrecitas5").innerHTML = listacitas[4].citas;
         document.getElementById("nombrecitas6").innerHTML = listacitas[5].citas;
-    
-
 }
 
 
@@ -552,26 +550,20 @@ function pintarMedicamentos() {
 
     /*Mostrar datos almacenados*/
     for (i = 0; i < listacitas.length; i++) {
+
+        document.getElementById("img1").className = "centrarVerticalmente";
+        document.getElementById("img11").className = "centrarVerticalmente";
+
         document.getElementById("nombremed1").innerHTML = listacitas[0].medicamento;
         document.getElementById("nombremed2").innerHTML = listacitas[1].medicamento;
         document.getElementById("nombremed3").innerHTML = listacitas[2].medicamento;
-       document.getElementById("nombremed4").innerHTML = listacitas[3].medicamento;
+        document.getElementById("nombremed4").innerHTML = listacitas[3].medicamento;
         document.getElementById("nombremed5").innerHTML = listacitas[4].medicamento;
-      document.getElementById("nombremed6").innerHTML = listacitas[5].medicamento;
-         document.getElementById("nombremed7").innerHTML = listacitas[6].medicamento;
-         document.getElementById("nombremed8").innerHTML = listacitas[7].medicamento;
+        document.getElementById("nombremed6").innerHTML = listacitas[5].medicamento;
+      
         ;
     }
-
-
-
-
-
-
 }
-
-
-
 
 function pintarMedicamentospt() {
 
@@ -610,7 +602,7 @@ function pintarMedicamentospt() {
 function mostrarmedicamentos2(){
 
     document.getElementById("mostrarmed1").className = "ocultar";
-    document.getElementById("mostrarmed2").className = "";
+    document.getElementById("mostrarmed2").className = "paddingAbajo";
     
 
    
@@ -619,7 +611,7 @@ function mostrarmedicamentos2(){
 function mostrarmedicamentos1(){
 
     document.getElementById("mostrarmed2").className = "ocultar";
-    document.getElementById("mostrarmed1").className = "";
+    document.getElementById("mostrarmed1").className = "paddingAbajo";
     
 
    
@@ -628,7 +620,7 @@ function mostrarmedicamentos1(){
 function mostrarmedicamentos2pm(){
 
     document.getElementById("mostrarmed1pm").className = "ocultar";
-    document.getElementById("mostrarmed2pm").className = "";
+    document.getElementById("mostrarmed2pm").className = "paddingAbajo";
     
 
    
@@ -637,7 +629,7 @@ function mostrarmedicamentos2pm(){
 function mostrarmedicamentos1pm(){
 
     document.getElementById("mostrarmed2pm").className = "ocultar";
-    document.getElementById("mostrarmed1pm").className = "";
+    document.getElementById("mostrarmed1pm").className = "paddingAbajo";
     
 
    
