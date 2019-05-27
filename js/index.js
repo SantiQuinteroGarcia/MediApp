@@ -508,21 +508,18 @@ function pintarCitas() {
 
 
     //se recorre el arreglo de rutinas  
-    var i = 0
 
     var nombrecitas = localStorage.getItem("CitasMedica");
     var listacitas = JSON.parse(nombrecitas);
     console.log(listacitas);
 
+    var arrayCita = ["nombrecitas1", "nombrecitas2", "nombrecitas3", "nombrecitas4", "nombrecitas5", "nombrecitas6"];
 
-    /*Mostrar datos almacenados*/
+    for(i = 0; i<listacitas.length; i++){
   
-        document.getElementById("nombrecitas1").innerHTML = listacitas[0].citas;
-        document.getElementById("nombrecitas2").innerHTML = listacitas[1].citas;
-        document.getElementById("nombrecitas3").innerHTML = listacitas[2].citas;
-        document.getElementById("nombrecitas4").innerHTML = listacitas[3].citas;
-        document.getElementById("nombrecitas5").innerHTML = listacitas[4].citas;
-        document.getElementById("nombrecitas6").innerHTML = listacitas[5].citas;
+        document.getElementById("citasagregadas").children[1].children[i].className = "paddingAbajo displayBlock";
+        document.getElementById(arrayCita[i]).innerHTML = listacitas[i].citas;
+    }
 }
 
 
@@ -547,6 +544,7 @@ function pintarMedicamentos() {
             document.getElementById(arrayHora[i]).innerHTML = listacitas[i].hora2;
             document.getElementById("mostrarmed1").children[i].children[0].className = "centrarVerticalmente";
             document.getElementById("mostrarmed1").children[i].children[2].className = "centrarVerticalmente";
+            document.getElementById("mostrarmed1").children[i].className = "paddingAbajo";
         }
     }
 }
@@ -574,6 +572,7 @@ function pintarMedicamentospt() {
             document.getElementById(arrayHora[i]).innerHTML = listacitas[i].hora2;
             document.getElementById("mostrarmed1pm").children[i].children[0].className = "centrarVerticalmente";
             document.getElementById("mostrarmed1pm").children[i].children[2].className = "centrarVerticalmente";
+            document.getElementById("mostrarmed1pm").children[i].className = "paddingAbajo";
         }
     }
 }

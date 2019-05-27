@@ -458,13 +458,17 @@ label{
     display: inline-block;
 }
 
+.displayBlock{
+    display: block;
+    margin: 0 0;
+}
+
 .zindex{
     z-index: 2;
 }
 
 .citasAgregadas{
     border-radius: 8px;
-    background-color: #0071BC;
     width: 250px;
     margin: 0 auto;
     margin-bottom: 10px;
