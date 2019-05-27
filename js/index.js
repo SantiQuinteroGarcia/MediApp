@@ -529,7 +529,7 @@ function pintarCitas() {
     /*Mostrar datos almacenados*/
   
         document.getElementById("nombrecitas1").innerHTML = listacitas[0].citas;
-        document.getElementById("nombrecitas2").innerHTML = listacitas[0].fecha;
+        document.getElementById("nombrecitas2").innerHTML = listacitas[0].citas;
         document.getElementById("nombrecitas3").innerHTML = listacitas[2].citas;
         document.getElementById("nombrecitas4").innerHTML = listacitas[3].citas;
         document.getElementById("nombrecitas5").innerHTML = listacitas[4].citas;
@@ -642,6 +642,15 @@ function mostrarmedicamentos1pm(){
 
    
 }
+
+
+
+
+
+
+
+
+
 
 
 app.initialize();
