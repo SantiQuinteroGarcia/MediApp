@@ -93,6 +93,15 @@ var app = {
         document.getElementById("flechaIzquierdaCalendarioUno").addEventListener("click", mostrarCalendarioTres);
         document.getElementById("flechaIzquierdaCalendarioTres").addEventListener("click", mostrarCalendarioDos);
 
+
+
+        document.getElementById("flechaDerechamed1").addEventListener("click", mostrarmedicamentos2);
+        document.getElementById("flechaIzquierdamed2").addEventListener("click", mostrarmedicamentos1);
+
+        document.getElementById("flechaDerechamed2pm").addEventListener("click", mostrarmedicamentos2pm);
+        document.getElementById("flechaIzquierdamed2pma").addEventListener("click", mostrarmedicamentos1pm);
+
+
         document.getElementById("porTomar1").addEventListener("click", configurarAlarma);        
         document.getElementById("porTomar4").addEventListener("click", configurarAlarma);        
         document.getElementById("btnCerrarConfigurarAlarma").addEventListener("click", mostrarInicioOmostrarMedicamentos);        
@@ -545,9 +554,13 @@ function pintarMedicamentos() {
     for (i = 0; i < listacitas.length; i++) {
         document.getElementById("nombremed1").innerHTML = listacitas[0].medicamento;
         document.getElementById("nombremed2").innerHTML = listacitas[1].medicamento;
-        //document.getElementById("nombrecitas2").innerHTML = listacitas[1].citas;
         document.getElementById("nombremed3").innerHTML = listacitas[2].medicamento;
-      
+       document.getElementById("nombremed4").innerHTML = listacitas[3].medicamento;
+        document.getElementById("nombremed5").innerHTML = listacitas[4].medicamento;
+      document.getElementById("nombremed6").innerHTML = listacitas[5].medicamento;
+         document.getElementById("nombremed7").innerHTML = listacitas[6].medicamento;
+         document.getElementById("nombremed8").innerHTML = listacitas[7].medicamento;
+        ;
     }
 
 
@@ -577,7 +590,13 @@ function pintarMedicamentospt() {
         document.getElementById("nombremedpt2").innerHTML = listacitas[1].medicamento;
         //document.getElementById("nombrecitas2").innerHTML = listacitas[1].citas;
         document.getElementById("nombremedpt3").innerHTML = listacitas[2].medicamento;
+         document.getElementById("nombremedpt4").innerHTML = listacitas[3].medicamento;
+        document.getElementById("nombremedpt5").innerHTML = listacitas[4].medicamento;
+        //document.getElementById("nombrecitas2").innerHTML = listacitas[1].citas;
+        document.getElementById("nombremedpt6").innerHTML = listacitas[5].medicamento;
       
+      document.getElementById("nombremedpt7").innerHTML = listacitas[6].medicamento;
+      document.getElementById("nombremedpt8").innerHTML = listacitas[7].medicamento;
     }
 
 
@@ -585,6 +604,43 @@ function pintarMedicamentospt() {
 
 
 
+}
+
+
+function mostrarmedicamentos2(){
+
+    document.getElementById("mostrarmed1").className = "ocultar";
+    document.getElementById("mostrarmed2").className = "";
+    
+
+   
+}
+
+function mostrarmedicamentos1(){
+
+    document.getElementById("mostrarmed2").className = "ocultar";
+    document.getElementById("mostrarmed1").className = "";
+    
+
+   
+}
+
+function mostrarmedicamentos2pm(){
+
+    document.getElementById("mostrarmed1pm").className = "ocultar";
+    document.getElementById("mostrarmed2pm").className = "";
+    
+
+   
+}
+
+function mostrarmedicamentos1pm(){
+
+    document.getElementById("mostrarmed2pm").className = "ocultar";
+    document.getElementById("mostrarmed1pm").className = "";
+    
+
+   
 }
 
 
