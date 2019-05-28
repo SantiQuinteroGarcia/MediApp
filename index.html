@@ -29,9 +29,8 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-    <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="Content-Security-Policy" content="default-src gap://ready file://* *; style-src 'self' http://* https://* 'unsafe-inline'; script-src 'self' http://* https://* 'unsafe-inline' 'unsafe-eval'">
+        <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport"
         content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -410,17 +409,10 @@
             <br>
             <h1 class="fuenteTitulos alinearCentro" id="tituloCita">Mi diario</h1>
         </div>
-
-        <div class="divDiario" id="btnNota1">
-            <img src="img/nota1inicio.png" id="btnNota11">
-        </div> 
-
-        <div class="divDiario2" id="btnNota2">
-            <img src="img/nota2inicio.png" id="btnNota22">
-        </div> 
+        <div id="contNotas"> </div>
 
         <div class="anadir">
-            <img src="img/añadir notainicio.png" id="btnanadirNota">
+            <img src="img/añadir notainicio.png"  id="btnanadirNota">
         </div>
 
         

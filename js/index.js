@@ -112,7 +112,7 @@ var app = {
         document.getElementById("btnMasACitas").addEventListener("click", mostrarcitas);
 
         document.getElementById("btnMiDiario").addEventListener("click", mostrarMiDiario);
-        document.getElementById("btnanadirNota").addEventListener("click", mostrarNota);
+        document.getElementById("btnanadirNota").addEventListener("click", mostrarNota2);
         document.getElementById("volverDiario").addEventListener("click", mostrarMas);
         document.getElementById("btnvolverNota").addEventListener("click", mostrarMiDiario);
 
@@ -248,6 +248,15 @@ function mostrarNota(){
 
     ocultar();
     document.getElementById("divNota").className = "Pantalla2 animated fadeIn";
+}
+
+function mostrarNota2(){
+
+    ocultar();
+    document.getElementById("divNota").className = "Pantalla2 animated fadeIn";
+    document.getElementById("nombreNota").value = "";
+    document.getElementById("descripcionNota").value = "";
+    document.getElementById('nombreNota').disabled = false;
 }
 
 function configurarDias() {
@@ -585,19 +594,71 @@ function pintarMedicamentospt() {
 function guardarNota(){
 
     let nota = localStorage.getItem("itemNota") != null ? JSON.parse(localStorage.getItem("itemNota")) : [];
+    var index="";
+    var nombreAEncontrar=document.getElementById("nombreNota").value;;
+
+    for(var i = 0; i < nota.length; i++) {
+            
+        if (nota[i].nombre == nombreAEncontrar){
+                        
+            index = i+1;
+        	break;
+    	}
+    }
+    if(index>0)
+    {
+        objetoNota.nombre = document.getElementById("nombreNota").value;
+        objetoNota.descripcion = document.getElementById("descripcionNota").value;
+        nota[index-1]=objetoNota;
+        localStorage.setItem("itemNota", JSON.stringify(nota));
+        document.getElementById('nombreNota').disabled = false;
+        pintarNotas();
+    }
+    else
+    {
+        objetoNota.nombre = document.getElementById("nombreNota").value;
+        objetoNota.descripcion = document.getElementById("descripcionNota").value;
+
+        if(objetoNota.nombre.length == 0 || objetoNota.descripcion.length == 0){
+
+        alert("Rellene todos los campos");
+
+        }else
+        {
+            document.getElementById('nombreNota').disabled = false;
+            nota.push(objetoNota);
+            localStorage.setItem("itemNota", JSON.stringify(nota));
+
+            document.getElementById("nombreNota").value = "";
+            document.getElementById("descripcionNota").value = "";
+
+            pintarNotas();
+        }
+    }
     
-    objetoNota.nombre = document.getElementById("nombreNota").value;
-    objetoNota.descripcion = document.getElementById("descripcionNota").value;
-
-    nota.push(objetoNota);
-    localStorage.setItem("itemNota", JSON.stringify(nota));
-
-    document.getElementById("nombreNota").value = "";
-    document.getElementById("descripcionNota").value = "";
 }
 
-function editarNota(){
+function pintarNotas()
+{
+    let nota = localStorage.getItem("itemNota") != null ? JSON.parse(localStorage.getItem("itemNota")) : [];
+    $("#contNotas").empty();
+    for (let i = 0;i < nota.length; i++) 
+    {
+        $("#contNotas").append(" <div class='divDiario' id='btnNota1'><img src='img/nota"+i+"inicio.png' onclick='editarNota("+i+")' id='btnNota11'></div>");
+        
+    }
+
+    mostrarMiDiario();
+}
+
+function editarNota(i)
+{
     
+    let nota = localStorage.getItem("itemNota") != null ? JSON.parse(localStorage.getItem("itemNota")) : [];
+    document.getElementById("nombreNota").value = nota[i].nombre ;
+    document.getElementById("descripcionNota").value = nota[i].descripcion;
+    document.getElementById('nombreNota').disabled = true;
+    mostrarNota();
 }
 
 app.initialize();
